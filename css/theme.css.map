@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": ";;AAGE,UAGC;EAFA,WAAW,EAAE,cAAc,EAC3B,GAAG,EAAC,2BAA2B;AAEhC,UAGC;EAFA,WAAW,EAAE,WAAW,EACxB,GAAG,EAAC,OAAO;AAEZ,UAGC;EAFA,WAAW,EAAE,EAAE,EACf,GAAG,EAAC,OAAO;;ACFd,IAAI,GACH,WAAW,EAAE,KAAK",
+"sources": ["sass/_fonts.scss","sass/theme.scss"],
 "names": [],
 "file": "theme.css"
 }

@@ -1,0 +1,18 @@
+// GD.INFO : _FONTS => SCSS \\
+/* GD.INFO _FONTS => CSS */
+	// @FONT-FACE
+		@font-face { /* serif */
+			font-family: 'merriweather';
+			src:url('fonts/merriweather/*');
+		}
+		@font-face { /* sans-serf */
+			font-family: 'open sans';
+			src:url('');
+		}
+		@font-face { /* mono */
+			font-family: '';
+			src:url('');
+		}
+	// VARIABLES
+	// MIXINS
+	// FUNCTIONS
