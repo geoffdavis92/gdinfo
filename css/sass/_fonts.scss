@@ -2,17 +2,31 @@
 /* GD.INFO _FONTS => CSS */
 	// @FONT-FACE
 		@font-face { /* serif */
-			font-family: 'merriweather';
-			src:url('fonts/merriweather/*');
+			font-family: 'droid serif';
+			src:url('fonts/droid/serif/droidserif.ttf') format(truetype), /* 400 */
+				url('fonts/droid/serif/droidserif-italic.ttf') format(truetype),
+				url('fonts/droid/serif/droidserif-bold.ttf') format(truetype), /* 700 */
+				url('fonts/droid/serif/droidserif-bolditalic.ttf') format(truetype);
 		}
 		@font-face { /* sans-serf */
-			font-family: 'open sans';
-			src:url('');
+			font-family: 'droid sans';
+			src:url('fonts/droid/serif/droidsans.ttf') format(truetype), /* 400 */
+				url('fonts/droid/sans/droidsans-bold.ttf') format(truetype); /* 700 */
 		}
 		@font-face { /* mono */
-			font-family: '';
-			src:url('');
+			font-family: 'droid mono';
+			src:url('fonts/droid/mono/droidsansmono.ttf') format(truetype); /* 400 */
 		}
 	// VARIABLES
+		$fontstack-sf	: 'droid serif', 'curior', serif;
+		$fontstack-ss	: 'droid sans', 'arial', sans-serif;
+		$fontstack-mo	: 'droid mono', monospace;
 	// MIXINS
+		@mixin serif(){
+			font-family: $fontstack-sf;
+		}
+		@mixin serif-heading(){
+			font-family: $fontstack-sf;
+			font-weight: 700;
+		}
 	// FUNCTIONS

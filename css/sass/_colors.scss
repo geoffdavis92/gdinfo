@@ -2,10 +2,19 @@
 /* GD.INFO _COLORS => CSS */
 
 	// VARIABLES
-		$base	: #333;
-		$red	: #a00505;
-		$green	: #05a005;
-		$blue	: #0505a0;
+		$base		: #111;
+		$base75		: lighten($base,75%);
+		$base9		: lighten($base,90%);
+
+		$pri-red	: #a00505; 
+		$pri-green	: #05a005;
+		$pri-blue	: #0505a0;
+
+		$maroon	: #9D2042;
+		$blue	: #20429D;
+		$green	: #429D20;
+		$violet	: #42209D;
+		$orange	: #9D4220;
 	// MIXINS
 	// FUNCTIONS
 

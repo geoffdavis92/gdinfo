@@ -5,10 +5,107 @@
 		@import "fonts";
 
 	// VARIABLES
+			// Colors \\
+		$bg-body	: $base9;
+		$bg-main	: white;
+		$bdr-main	: $base75;
+		$hdr-h1		: white;
+		$link 		: $hdr-h1;
+		$link-h		: $base75;
+
+		$bdr-rad	: 10px;
+		$pd-li		: 20px;
 	// MIXINS
 	// FUNCTIONS
 
 /* GD.INFO THEME => CSS */
 body{
-	font-family: serif;
+	@include serif;
+	background-color: $bg-body;
+
+	h1, h2, h3{
+		@include serif-heading;
+	}
+	header{
+		background: $maroon;
+		margin-top: -1.75%;
+		h1.h1{
+			color: $hdr-h1;
+			font-size: 3.75em;
+			padding: 15px 0 0 0;
+		}
+		nav{
+			ul{
+				li{
+					padding: 0 $pd-li 0 $pd-li;
+					a{
+						&:link{
+							color: $link;
+						}
+						&:hover{
+							color: $link-h;
+							text-decoration: none;
+						}
+						&:active{
+							color: $link;
+						}
+						&:visited{
+							color: $link;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+		&.fixed{
+			background: maroon;
+		    color: white;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    h1{
+		    	outline: 2px solid gold;
+		    }
+		}
+	}
+	div.container{
+		div.main{
+			background-color: $bg-main;
+			border: 2px solid $bdr-main;
+			border-radius: $bdr-rad;
+		}
+		/*div{
+			height: 3em;
+			width: 3em;
+			&.pred{
+				background-color: $pri-red;
+			}
+			&.pgreen{
+				background-color: $pri-green;
+			}
+			&.pblue{
+				background-color: $pri-blue;
+			}
+			&.maroon{
+				background-color: $maroon;
+			}
+			&.blue{
+				background-color: $blue;
+			}
+			&.green{
+				background-color: $green;
+			}
+			&.violet{
+				background-color: $violet;
+			}
+			&.orange{
+				background-color: $orange;
+			}
+			&.space{
+				height: 2em;
+				width: 2em;
+			}
+		} */
+	}
 }
