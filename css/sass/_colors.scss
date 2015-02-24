@@ -2,7 +2,9 @@
 /* GD.INFO _COLORS => CSS */
 
 	// VARIABLES
+		$t 			: transparent;
 		$base		: #111;
+		$base5		: lighten($base,50%);
 		$base75		: lighten($base,75%);
 		$base9		: lighten($base,90%);
 
@@ -17,4 +19,23 @@
 		$orange	: #9D4220;
 	// MIXINS
 	// FUNCTIONS
+	
+	/*	___________________________
+		  SASS 	| CSS Output
+		 _______|__________________
+		t 	: transparent;
+		base	: #111;
+		base5	: lighten($base,50%);
+		base75	: lighten($base,75%);
+		base9	: lighten($base,90%);
 
+		pri-red	: #a00505; 
+		pri-green:#05a005;
+		pri-blue: #0505a0;
+
+		maroon	: #9D2042;
+		blue	: #20429D;
+		green	: #429D20;
+		violet	: #42209D;
+		orange	: #9D4220;
+	*/

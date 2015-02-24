@@ -4,7 +4,7 @@
 	<meta charset="UTF-8"/>
 	<meta name="author" content="geoffdavis92"/>
 	<meta name="keywords" content=""/>
-	<title>Geoff Davis : Frontend Developer</title>
+	<title>Test PHP Page</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/theme.css"/>
 </head>
@@ -25,8 +25,10 @@
 		<div class="col-xs-2"></div>
 		<div class="col-xs-8 main">
 			<h2 class="h2">Welcome</h2>
-			<p>This is just a regular sentence.
-				<code>This is code!</code>
+			<p><?php
+				echo "This is PHP. It is a server-side script that outputs upon render.";
+				echo "<br/><code>It can render <abbr title='HyperText Markup Language'><b>HTML</b></abbr> on output as well!</code>";
+			?>
 			</p>
 		</div>
 		<div class="col-xs-2"></div>

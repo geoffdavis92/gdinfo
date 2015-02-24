@@ -12,13 +12,23 @@
 		$hdr-h1		: white;
 		$link 		: $hdr-h1;
 		$link-h		: $base75;
+		$link-a		: $link;
 
 		$bdr-rad	: 10px;
 		$pd-li		: 20px;
 	// MIXINS
+	@mixin time($time...){
+		-webkit-transition: $time;
+		-moz-transition: $time;
+		-o-transition: $time;
+		transition: $time;
+	}
 	// FUNCTIONS
 
 /* GD.INFO THEME => CSS */
+*:active, *:hover{
+	text-decoration: none;
+}
 body{
 	@include serif;
 	background-color: $bg-body;
@@ -35,23 +45,39 @@ body{
 			padding: 15px 0 0 0;
 		}
 		nav{
+			a, li{
+				@include time(.25s, all);
+			}
 			ul{
 				li{
+					border-bottom: 3px solid $t;
+					letter-spacing: 1px;
 					padding: 0 $pd-li 0 $pd-li;
+					&:hover{
+						border-bottom: 3px solid $link-h;
+						a{
+							color: $link-h !important;
+							text-decoration: none;
+						}
+					}
+					&:active{
+						@include time(0,all);
+						border-bottom-color: $link-a;
+						a:active{
+							@include time(0,all);
+							color: white !important;
+						}
+					}
 					a{
+						text-decoration: none;
 						&:link{
 							color: $link;
 						}
-						&:hover{
-							color: $link-h;
-							text-decoration: none;
-						}
 						&:active{
-							color: $link;
+							color: $link-a;
 						}
 						&:visited{
 							color: $link;
-							text-decoration: none;
 						}
 					}
 				}
@@ -74,38 +100,51 @@ body{
 			background-color: $bg-main;
 			border: 2px solid $bdr-main;
 			border-radius: $bdr-rad;
+			h2, h3, h4{
+				@include serif;
+			}
+			p{
+				@include sans;
+				/* TYPOGRAPHY */
+				font-size: 12px;
+				letter-spacing: .5px;
+				code{
+					@include mono;
+					font-size: .8em;
+				}
+			}
 		}
-		/*div{
-			height: 3em;
-			width: 3em;
-			&.pred{
-				background-color: $pri-red;
-			}
-			&.pgreen{
-				background-color: $pri-green;
-			}
-			&.pblue{
-				background-color: $pri-blue;
-			}
-			&.maroon{
-				background-color: $maroon;
-			}
-			&.blue{
-				background-color: $blue;
-			}
-			&.green{
-				background-color: $green;
-			}
-			&.violet{
-				background-color: $violet;
-			}
-			&.orange{
-				background-color: $orange;
-			}
-			&.space{
-				height: 2em;
-				width: 2em;
-			}
-		} */
+		// div{
+		// 	height: 3em;
+		// 	width: 3em;
+		// 	&.pred{
+		// 		background-color: $pri-red;
+		// 	}
+		// 	&.pgreen{
+		// 		background-color: $pri-green;
+		// 	}
+		// 	&.pblue{
+		// 		background-color: $pri-blue;
+		// 	}
+		// 	&.maroon{
+		// 		background-color: $maroon;
+		// 	}
+		// 	&.blue{
+		// 		background-color: $blue;
+		// 	}
+		// 	&.green{
+		// 		background-color: $green;
+		// 	}
+		// 	&.violet{
+		// 		background-color: $violet;
+		// 	}
+		// 	&.orange{
+		// 		background-color: $orange;
+		// 	}
+		// 	&.space{
+		// 		height: 2em;
+		// 		width: 2em;
+		// 	}
+		// }
 	}
 }

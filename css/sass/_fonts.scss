@@ -8,9 +8,13 @@
 				url('fonts/droid/serif/droidserif-bold.ttf') format(truetype), /* 700 */
 				url('fonts/droid/serif/droidserif-bolditalic.ttf') format(truetype);
 		}
+		// @font-face {
+		// 	font-family:'open sans';
+		// 	src:url(fonts/opensans/opensans-);
+		// }
 		@font-face { /* sans-serf */
 			font-family: 'droid sans';
-			src:url('fonts/droid/serif/droidsans.ttf') format(truetype), /* 400 */
+			src:url('fonts/droid/sans/droidsans.ttf') format(truetype), /* 400 */
 				url('fonts/droid/sans/droidsans-bold.ttf') format(truetype); /* 700 */
 		}
 		@font-face { /* mono */
@@ -28,5 +32,16 @@
 		@mixin serif-heading(){
 			font-family: $fontstack-sf;
 			font-weight: 700;
+		}
+		@mixin sans(){
+			font-family: $fontstack-ss;
+			font-weight: 300;
+		}
+		@mixin sans-heading(){
+			font-family: $fontstack-ss;
+			font-weight: 700;
+		}
+		@mixin mono(){
+			font-family: $fontstack-mo;
 		}
 	// FUNCTIONS
