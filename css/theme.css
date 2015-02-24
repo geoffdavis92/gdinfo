@@ -1,2 +1,112 @@
-@font-face{font-family:'droid serif';src:url("fonts/droid/serif/droidserif.ttf") format(truetype),url("fonts/droid/serif/droidserif-italic.ttf") format(truetype),url("fonts/droid/serif/droidserif-bold.ttf") format(truetype),url("fonts/droid/serif/droidserif-bolditalic.ttf") format(truetype)}@font-face{font-family:'droid sans';src:url("fonts/droid/sans/droidsans.ttf") format(truetype),url("fonts/droid/sans/droidsans-bold.ttf") format(truetype)}@font-face{font-family:'droid mono';src:url("fonts/droid/mono/droidsansmono.ttf") format(truetype)}*:active,*:hover{text-decoration:none}body{font-family:"droid serif","curior",serif;background-color:#f7f7f7}body h1,body h2,body h3{font-family:"droid serif","curior",serif;font-weight:700}body header{background:#9D2042;margin-top:-1.75%}body header h1.h1{color:#fff;font-size:3.75em;padding:15px 0 0 0}body header nav a,body header nav li{-webkit-transition:0.25s,all;-moz-transition:0.25s,all;-o-transition:0.25s,all;transition:0.25s,all}body header nav ul li{border-bottom:3px solid transparent;letter-spacing:1px;padding:0 20px 0 20px}body header nav ul li:hover{border-bottom:3px solid #d0d0d0}body header nav ul li:hover a{color:#d0d0d0 !important;text-decoration:none}body header nav ul li:active{-webkit-transition:0,all;-moz-transition:0,all;-o-transition:0,all;transition:0,all;border-bottom-color:#fff}body header nav ul li:active a:active{-webkit-transition:0,all;-moz-transition:0,all;-o-transition:0,all;transition:0,all;color:white !important}body header nav ul li a{text-decoration:none}body header nav ul li a:link{color:#fff}body header nav ul li a:active{color:#fff}body header nav ul li a:visited{color:#fff}body header.fixed{background:maroon;color:white;position:absolute;top:0;left:0;width:100%}body header.fixed h1{outline:2px solid gold}body div.container div.main{background-color:#fff;border:2px solid #d0d0d0;border-radius:10px}body div.container div.main h2,body div.container div.main h3,body div.container div.main h4{font-family:"droid serif","curior",serif}body div.container div.main p{font-family:"droid sans","arial",sans-serif;font-weight:300;font-size:12px;letter-spacing:.5px}body div.container div.main p code{font-family:"droid mono",monospace;font-size:.8em}
+/* GD.INFO _COLORS => CSS */
+	/*	___________________________
+		  SASS 	| CSS Output
+		 _______|__________________
+		t 	: transparent;
+		base	: #111;
+		base5	: lighten($base,50%);
+		base75	: lighten($base,75%);
+		base9	: lighten($base,90%);
+
+		pri-red	: #a00505; 
+		pri-green:#05a005;
+		pri-blue: #0505a0;
+
+		maroon	: #9D2042;
+		blue	: #20429D;
+		green	: #429D20;
+		violet	: #42209D;
+		orange	: #9D4220;
+	*/
+/* GD.INFO _FONTS => CSS */
+@font-face {
+  /* serif */
+  font-family: 'droid serif';
+  src: url("fonts/droid/serif/droidserif.ttf") format(truetype), url("fonts/droid/serif/droidserif-italic.ttf") format(truetype), url("fonts/droid/serif/droidserif-bold.ttf") format(truetype), url("fonts/droid/serif/droidserif-bolditalic.ttf") format(truetype); }
+@font-face {
+  /* sans-serf */
+  font-family: 'droid sans';
+  src: url("fonts/droid/sans/droidsans.ttf") format(truetype), url("fonts/droid/sans/droidsans-bold.ttf") format(truetype);
+  /* 700 */ }
+@font-face {
+  /* mono */
+  font-family: 'droid mono';
+  src: url("fonts/droid/mono/droidsansmono.ttf") format(truetype);
+  /* 400 */ }
+/* GD.INFO THEME => CSS */
+*:active, *:hover {
+  text-decoration: none; }
+
+body {
+  font-family: "droid serif", "curior", serif;
+  background-color: #f7f7f7; }
+  body h1, body h2, body h3 {
+    font-family: "droid serif", "curior", serif;
+    font-weight: 700; }
+  body header {
+    background: #9D2042;
+    margin-top: -1.75%; }
+    body header h1.h1 {
+      color: white;
+      font-size: 3.75em;
+      padding: 15px 0 0 0; }
+    body header nav a, body header nav li {
+      -webkit-transition: 0.25s, all;
+      -moz-transition: 0.25s, all;
+      -o-transition: 0.25s, all;
+      transition: 0.25s, all; }
+    body header nav ul li {
+      border-bottom: 3px solid transparent;
+      letter-spacing: 1px;
+      padding: 0 20px 0 20px; }
+      body header nav ul li:hover {
+        border-bottom: 3px solid #d0d0d0; }
+        body header nav ul li:hover a {
+          color: #d0d0d0 !important;
+          text-decoration: none; }
+      body header nav ul li:active {
+        -webkit-transition: 0, all;
+        -moz-transition: 0, all;
+        -o-transition: 0, all;
+        transition: 0, all;
+        border-bottom-color: white; }
+        body header nav ul li:active a:active {
+          -webkit-transition: 0, all;
+          -moz-transition: 0, all;
+          -o-transition: 0, all;
+          transition: 0, all;
+          color: white !important; }
+      body header nav ul li a {
+        text-decoration: none; }
+        body header nav ul li a:link {
+          color: white; }
+        body header nav ul li a:active {
+          color: white; }
+        body header nav ul li a:visited {
+          color: white; }
+    body header.fixed {
+      background: maroon;
+      color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; }
+      body header.fixed h1 {
+        outline: 2px solid gold; }
+  body div.container div.main {
+    background-color: white;
+    border: 2px solid #d0d0d0;
+    border-radius: 10px; }
+    body div.container div.main h2, body div.container div.main h3, body div.container div.main h4 {
+      font-family: "droid serif", "curior", serif; }
+    body div.container div.main p {
+      font-family: "droid sans", "arial", sans-serif;
+      font-weight: 300;
+      /* TYPOGRAPHY */
+      font-size: 12px;
+      letter-spacing: .5px; }
+      body div.container div.main p code {
+        font-family: "droid mono", monospace;
+        font-size: .8em; }
+
 /*# sourceMappingURL=theme.css.map */
