@@ -9,10 +9,13 @@
 		$bg-body	: $base9;
 		$bg-main	: white;
 		$bdr-main	: $base75;
-		$hdr-h1		: white;
+		$ftr		: white;
+		$hdr-h1		: $ftr;
 		$link 		: $hdr-h1;
 		$link-h		: $base75;
 		$link-a		: $link;
+		$pq			: $gold;
+		$pq-lt		: rgba($pq,.25);
 
 		$bdr-rad	: 10px;
 		$pd-li		: 20px;
@@ -47,9 +50,16 @@ body{
 	@include serif;
 	background-color: $bg-body;
 	// @include vendattr(transition, .25s all); vendval(background,'rgb(125,90,90)');
-
-	h1, h2, h3{
+	h1, h2, h3, h4, h5, h6{
+		small{
+			@include sans;
+		}
+	}
+	h1, h2, h3, h4{
 		@include serif-heading;
+	}
+	h5, h6{
+		@include sans-heading;
 	}
 	header{
 		background: $maroon;
@@ -122,10 +132,48 @@ body{
 				@include sans;
 				/* TYPOGRAPHY */
 				font-size: 12px;
-				letter-spacing: .5px;
+				letter-spacing: .75px;
+				line-height: 1.5em;
 				code{
 					@include mono;
-					font-size: .8em;
+					// font-size: .8em;
+				}
+				&.pullquote{
+					// background-color: lighten($pq, 57.5%);
+					border-top: 5px solid $pq-lt;
+					border-bottom: 5px solid $pq-lt;
+					color: $pq;
+					@include serif();
+					font-size: 1.75em;
+					font-style: italic;
+					padding: .5em;
+					text-align: center;
+				}
+			}
+			blockquote{
+				font-style: italic;
+				&::after{
+					content: "– "attr(data-source);
+					font-size: .75em;
+					font-style: initial;
+					padding-left: 25px;
+				}
+			}
+			section{
+				&[id]{
+					margin-left: 15px;
+
+					p{
+						margin-left: 25px;
+						& samp{
+							$color : $violet;
+							background-color: lighten($color, 60%);
+							border-radius: 3px;
+							color: $color;
+							font-size: .9em;
+							padding: 3px;
+						}
+					}
 				}
 			}
 		}
@@ -161,5 +209,12 @@ body{
 		// 		width: 2em;
 		// 	}
 		// }
+	}
+	footer{
+		background: $maroon;
+		color: $ftr;
+		font-size: (1em * .85);
+		margin: 1% 0 -5% 0;
+		padding: 12px 0 .5px 0;
 	}
 }

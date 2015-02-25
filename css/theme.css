@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* GD.INFO _COLORS => CSS */
 	/*	___________________________
 		  SASS 	| CSS Output
@@ -40,8 +41,14 @@
 body {
   font-family: "droid serif", "curior", serif;
   background-color: #f7f7f7; }
-  body h1, body h2, body h3 {
+  body h1 small, body h2 small, body h3 small, body h4 small, body h5 small, body h6 small {
+    font-family: "droid sans", "arial", sans-serif;
+    font-weight: 300; }
+  body h1, body h2, body h3, body h4 {
     font-family: "droid serif", "curior", serif;
+    font-weight: 700; }
+  body h5, body h6 {
+    font-family: "droid sans", "arial", sans-serif;
     font-weight: 700; }
   body header {
     background: #9D2042;
@@ -104,9 +111,41 @@ body {
       font-weight: 300;
       /* TYPOGRAPHY */
       font-size: 12px;
-      letter-spacing: .5px; }
+      letter-spacing: .75px;
+      line-height: 1.5em; }
       body div.container div.main p code {
-        font-family: "droid mono", monospace;
-        font-size: .8em; }
+        font-family: "droid mono", monospace; }
+      body div.container div.main p.pullquote {
+        border-top: 5px solid rgba(238, 193, 65, 0.25);
+        border-bottom: 5px solid rgba(238, 193, 65, 0.25);
+        color: #EEC141;
+        font-family: "droid serif", "curior", serif;
+        font-size: 1.75em;
+        font-style: italic;
+        padding: .5em;
+        text-align: center; }
+    body div.container div.main blockquote {
+      font-style: italic; }
+      body div.container div.main blockquote::after {
+        content: "– " attr(data-source);
+        font-size: .75em;
+        font-style: initial;
+        padding-left: 25px; }
+    body div.container div.main section[id] {
+      margin-left: 15px; }
+      body div.container div.main section[id] p {
+        margin-left: 25px; }
+        body div.container div.main section[id] p samp {
+          background-color: #f5f3fc;
+          border-radius: 3px;
+          color: #42209D;
+          font-size: .9em;
+          padding: 3px; }
+  body footer {
+    background: #9D2042;
+    color: white;
+    font-size: 0.85em;
+    margin: 1% 0 -5% 0;
+    padding: 12px 0 .5px 0; }
 
 /*# sourceMappingURL=theme.css.map */

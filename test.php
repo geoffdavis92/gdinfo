@@ -24,12 +24,34 @@
 	<div class="container">
 		<div class="col-xs-2"></div>
 		<div class="col-xs-8 main">
-			<h2 class="h2">Welcome</h2>
-			<p><?php
-				echo "This is PHP. It is a server-side script that outputs upon render.";
-				echo "<br/><code>It can render <abbr title='HyperText Markup Language'><b>HTML</b></abbr> on output as well!</code>";
-			?>
-			</p>
+			<h2 class="h2 text-center">PHP Testing</h2>
+			<h3 class="h3">PHP Commands</h3>
+			<section id="commands">
+			<h4 class="h4">echo</h4>
+				<p id="php"><samp><?php
+					echo "This is echo.";
+				?></samp></p>
+				<p class="exp">A simple <code>echo</code> command outputs code to the webpage.</p>
+				<p class="exp"></p>
+			<h4 class="h4">Strings <small>Output and Concatenation</small></h4>
+				<p id="php"><samp><?php 
+					echo "A simple string output.";
+				?></samp></p>
+				<p class="exp">String outputs use <code>echo</code> to output strings.</p>
+				<p id="php"><samp><?php 
+					echo "Sentence" . " " . "with" . " " . "concatenation" . "!";
+				?></samp></p>
+				<p class="exp">Strings can also be combined with other strings or PHP output using the <code>.</code> (period) operator, which is PHP's concatenation operator.</p>
+			<h4 class="h4">CMD</h4>
+			<p id="php"><samp><?php ?></samp></p>
+			<p class="exp"></p>
+			<h4 class="h4">CMD</h4>
+			<p id="php"><samp><?php ?></samp></p>
+			<p class="exp"></p>
+			<h4 class="h4">CMD</h4>
+			<p id="php"><samp><?php ?></samp></p>
+			<p class="exp"></p>
+			</section>
 		</div>
 		<div class="col-xs-2"></div>
 	</div>
