@@ -34,6 +34,29 @@
   font-family: 'droid mono';
   src: url("fonts/droid/mono/droidsansmono.ttf") format(truetype);
   /* 400 */ }
+.text-maroon {
+  color: #9D2042; }
+
+.text-blue {
+  color: #20429D; }
+
+.text-violet {
+  color: #42209D; }
+
+.text-orange {
+  color: #9D4220; }
+
+.text-gold {
+  color: #EEC141; }
+
+/*
+	$maroon	: #9D2042;
+		$blue	: #20429D;
+		$green	: #429D20;
+		$violet	: #42209D;
+		$orange	: #9D4220;
+		$gold	: #EEC141;
+*/
 /* GD.INFO THEME => CSS */
 *:active, *:hover {
   text-decoration: none; }
@@ -141,6 +164,31 @@ body {
           color: #42209D;
           font-size: .9em;
           padding: 3px; }
+          body div.container div.main section[id] p samp .comment {
+            background-color: #f6f6f6;
+            color: #848484; }
+            body div.container div.main section[id] p samp .comment::before {
+              content: "// "; }
+          body div.container div.main section[id] p samp.comment {
+            background-color: #f6f6f6;
+            color: #848484; }
+            body div.container div.main section[id] p samp.comment::before {
+              content: "// "; }
+      body div.container div.main section[id] pre#php {
+        background-color: #fcfbfe;
+        border-color: #d4c8f4;
+        color: #815ede;
+        font-size: .75em;
+        margin-left: 25px;
+        padding: 3px; }
+      body div.container div.main section[id] table.ref {
+        margin: 0 auto 0 auto;
+        width: 25em; }
+        body div.container div.main section[id] table.ref tr th {
+          font-family: "droid sans", "arial", sans-serif;
+          font-weight: 300; }
+        body div.container div.main section[id] table.ref tr td:first-of-type {
+          text-align: center; }
   body footer {
     background: #9D2042;
     color: white;

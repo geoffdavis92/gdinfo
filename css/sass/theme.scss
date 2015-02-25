@@ -172,6 +172,43 @@ body{
 							color: $color;
 							font-size: .9em;
 							padding: 3px;
+							.comment{
+								&::before{
+									content: "// ";
+								}
+								$color : lighten($base,45%);
+								background-color: lighten($color, 45%);
+								color: $color;
+							}
+							&.comment{
+								&::before{
+									content: "// ";
+								}
+								$color : lighten($base,45%);
+								background-color: lighten($color, 45%);
+								color: $color;
+							}
+						}
+					}
+					pre#php{
+						$color	: lighten($violet,25%);
+						background-color: lighten($color, 37%);
+						border-color: lighten($color,25%);
+						color: $color;
+						font-size: .75em;
+						margin-left: 25px;
+						padding: 3px;
+					}
+					table.ref{
+						margin: 0 auto 0 auto;
+						width: 25em;
+						tr{
+							th{
+								@include sans;
+							}
+							td:first-of-type{
+								text-align: center;
+							}
 						}
 					}
 				}
