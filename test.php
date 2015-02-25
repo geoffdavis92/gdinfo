@@ -149,11 +149,14 @@ if($var1 > $var2){
 			<p id="php"><samp><?php ?></samp></p>
 			<p class="exp"></p>
 			</section>
+			<section>
+				<div class="overlay"></div>
+			</section>
 		</div>
-		<div class="col-xs-2"></div>
+		<section class="col-xs-2"></section>
 	</div>
 	<footer>
-		<a href="code.php"><button class="btn btn-info center-block">code.php</button></a>
+		<!-- <a href="code.php"><button class="btn btn-info center-block">code.php</button></a> -->
 	</footer>
 </body>
 </html>

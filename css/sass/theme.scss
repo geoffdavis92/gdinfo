@@ -254,4 +254,37 @@ body{
 		margin: 1% 0 -5% 0;
 		padding: 12px 0 .5px 0;
 	}
+	div.overlay{
+		background-image: url(../img/med.jpg);
+		background-size: 100%;
+		content: "yes";
+		display: block;
+		height: 300px;
+		margin: 2em;
+		&::before{
+			background-color: rgba($gold,.5);
+			content: "";
+			display: block;
+			position: absolute;
+				// top: 0;
+				// left: 0;
+			width: 538px;
+			height: 300px;
+		}
+		&::after{
+			color: white;
+			content: "ITALIA";
+			display: block;
+			@include open-heading;
+			font-size: 5em;
+			font-weight: 800;
+			letter-spacing: .125em;
+			margin: auto;
+			position: relative;
+				top: 37%;
+				// right: auto;
+				// left: 2.125em;
+			text-align: center;
+		}
+	}
 }
