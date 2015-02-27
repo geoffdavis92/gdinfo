@@ -66,7 +66,7 @@
 
 body {
   font-family: "droid serif", "curior", serif;
-  background-color: #f7f7f7; }
+  background: #f7f7f7; }
   body h1 small, body h2 small, body h3 small, body h4 small, body h5 small, body h6 small {
     font-family: "droid sans", "arial", sans-serif;
     font-weight: 300; }
@@ -126,6 +126,8 @@ body {
       width: 100%; }
       body header.fixed h1 {
         outline: 2px solid gold; }
+  body div.container .fb-share-button iframe body > * {
+    background-color: #20429D !important; }
   body div.container div.main {
     background-color: white;
     border: 2px solid #d0d0d0;

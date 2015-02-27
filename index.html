@@ -7,6 +7,7 @@
 	<title>Geoff Davis : Frontend Developer</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/theme.css"/>
+	<script src="js/lib/jquery.js"></script>
 </head>
 <body>
 	<header class="text-center">
@@ -54,5 +55,9 @@ start('This is `pre` code');</pre>
 		&copy;2015 geoffdavis92 | site map
 	</p></footer>
 	<script src="js/init.js"></script>
+	<script>
+	var url = document.URL;
+	$('span.fb-share-button').attr('data-href',url);
+	</script>
 </body>
 </html>

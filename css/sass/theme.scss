@@ -48,7 +48,7 @@
 }
 body{
 	@include serif;
-	background-color: $bg-body;
+	background: rgba($bg-body,1);
 	// @include vendattr(transition, .25s all); vendval(background,'rgb(125,90,90)');
 	h1, h2, h3, h4, h5, h6{
 		small{
@@ -121,6 +121,9 @@ body{
 		}
 	}
 	div.container{
+		.fb-share-button iframe body > *{
+			background-color: $blue !important;
+		}
 		div.main{
 			background-color: $bg-main;
 			border: 2px solid $bdr-main;
@@ -214,38 +217,6 @@ body{
 				}
 			}
 		}
-		// div{
-		// 	height: 3em;
-		// 	width: 3em;
-		// 	&.pred{
-		// 		background-color: $pri-red;
-		// 	}
-		// 	&.pgreen{
-		// 		background-color: $pri-green;
-		// 	}
-		// 	&.pblue{
-		// 		background-color: $pri-blue;
-		// 	}
-		// 	&.maroon{
-		// 		background-color: $maroon;
-		// 	}
-		// 	&.blue{
-		// 		background-color: $blue;
-		// 	}
-		// 	&.green{
-		// 		background-color: $green;
-		// 	}
-		// 	&.violet{
-		// 		background-color: $violet;
-		// 	}
-		// 	&.orange{
-		// 		background-color: $orange;
-		// 	}
-		// 	&.space{
-		// 		height: 2em;
-		// 		width: 2em;
-		// 	}
-		// }
 	}
 	footer{
 		background: $maroon;

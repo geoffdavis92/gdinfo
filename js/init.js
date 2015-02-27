@@ -3,8 +3,12 @@ function Log(e){
 	_log(e);
 }
 
-var db = connect("localhost:27017/users");
-console.log(db);
-var users = new Mongo().getDB("users");
-
-console.log(users);
+function start(e){
+	if(!e){
+		e = "none";
+		console.log(e);
+	}
+	else{
+		console.log(e);
+	}
+}
