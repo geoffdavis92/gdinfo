@@ -126,8 +126,6 @@ body {
       width: 100%; }
       body header.fixed h1 {
         outline: 2px solid gold; }
-  body div.container .fb-share-button iframe body > * {
-    background-color: #20429D !important; }
   body div.container div.main {
     background-color: white;
     border: 2px solid #d0d0d0;
@@ -198,34 +196,7 @@ body {
     background: #9D2042;
     color: white;
     font-size: 0.85em;
-    margin: 1% 0 -5% 0;
+    margin: 1% 0 0 0;
     padding: 12px 0 .5px 0; }
-  body div.overlay {
-    background-image: url(../img/med.jpg);
-    background-size: 100%;
-    content: "yes";
-    display: block;
-    height: 300px;
-    margin: 2em; }
-    body div.overlay::before {
-      background-color: rgba(238, 193, 65, 0.5);
-      content: "";
-      display: block;
-      position: absolute;
-      width: 538px;
-      height: 300px; }
-    body div.overlay::after {
-      color: white;
-      content: "ITALIA";
-      display: block;
-      font-family: "open sans", "arial", sans-serif;
-      font-weight: 700;
-      font-size: 5em;
-      font-weight: 800;
-      letter-spacing: .125em;
-      margin: auto;
-      position: relative;
-      top: 37%;
-      text-align: center; }
 
 /*# sourceMappingURL=theme.css.map */
