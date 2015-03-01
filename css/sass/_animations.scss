@@ -1,0 +1,96 @@
+// GD.INFO : _ANIMATIONS => SCSS \\
+/* GD.INFO _ANIMATIONS => CSS */
+	/*
+		lr-ani( interval , direction , timing , element color )
+			>	Animates on :hover
+			>	interval : keyframe breakpoints
+			>	direction : starting direction of animation
+			>	timing : duration of animation
+			>	element color : color property of parent; declared 
+					in mixin for animation and element text
+	*/
+// VARIABLES
+	$pct-sign	: "%";
+
+@mixin ctc($u,$dir,$time, $parent-color){ 				// $u => 20 , $dir => left
+	$test		: red;
+	$hvr-color	: white;
+	$hvr-bgc	: $parent-color;
+	$hvr-bdc	: $hvr-bgc;
+
+	border: 1px solid $parent-color;
+	color: $parent-color;
+	-webkit-animation: lr-ani-rev;
+	@-webkit-keyframes lr-ani-rev{
+			$div : (100 / $u);					// $div => 5
+			@for $cen from 100 through 0 {		// => 0,1,...,100
+				@for $mul from 0 through $div {	// => 0,1,...{5}
+					@if $mul * $u == $cen{		// => 2 * 19 == 38 [!match]=> 2 * 20 == 40 [match ...]
+						$pct	: #{$cen}#{$pct-sign};
+						$dec	: ($cen / 100);
+						$color	: lighten($parent-color, $cen);
+						#{$pct} {
+							color: $color;
+							background: -webkit-linear-gradient($dir, rgba($hvr-bgc, $dec) $pct, white $pct, white 100%);
+						}
+					}
+				}
+			}
+		}
+	&:hover{
+		-webkit-animation: ctc $time;
+		animation: ctc $time;
+		color: $hvr-color;
+		background-color: $hvr-bgc;
+		@-webkit-keyframes ctc{
+			$div : (100 / $u);					// $div => 5
+			@for $cen from 0 through 100 {		// => 0,1,...,100
+				@for $mul from 0 through $div {	// => 0,1,...{5}
+					@if $mul * $u == $cen{		// => 2 * 19 == 38 [!match]=> 2 * 20 == 40 [match ...]
+						$pct	: #{$cen}#{$pct-sign};
+						$dec	: ($cen / 100);
+						$color	: lighten($parent-color, $cen);
+						#{$pct} {
+							color: $color;
+							background: -webkit-linear-gradient($dir, rgba($hvr-bgc, $dec) $pct, white $pct, white 100%);
+						}
+					}
+				}
+			}
+		}
+	}
+	&:active{
+		-webkit-animation-play-state: paused;
+	}
+}
+
+@mixin rad($u,$dir,$time, $bgc){
+	$hvr-bgc	: $bgc;
+	$act-bdc	: $hvr-bgc;
+	$act-bgc	: $white;
+	$act-txt	: $bgc;
+
+	&:active{
+		background-color: $act-bgc;
+		color: $act-txt;
+		-webkit-animation: rad $time;
+		@-webkit-keyframes rad{
+			from { color: white; }
+			$div : (100 / $u);					// $div => 5
+			@for $cen from 0 through 100 {		// => 0,1,...,100
+				@for $mul from 0 through $div {	// => 0,1,...{5}
+					@if $mul * $u == $cen{		// => 2 * 19 == 38 [!match]=> 2 * 20 == 40 [match ...]
+						$pct	: #{$cen}#{$pct-sign};
+						$dec	: ($cen / 100);
+						// $color	: darken($act-txt, $cen);
+						#{$pct} {
+							// color: $color;
+							background: -webkit-radial-gradient($dir, $act-bgc $pct, rgba($hvr-bgc, $dec) $pct, rgba($hvr-bgc, $dec) 100%);
+						}
+					}
+				}
+			}
+			to { color: $act-txt; }
+		}
+	}
+}

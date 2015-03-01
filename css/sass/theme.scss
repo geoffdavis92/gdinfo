@@ -3,6 +3,7 @@
 	// IMPORTS
 		@import "colors";
 		@import "fonts";
+		@import "animations";
 
 	// VARIABLES
 			// Colors \\
@@ -16,10 +17,22 @@
 		$link-a		: $link;
 		$pq			: $gold;
 		$pq-lt		: rgba($pq,.25);
-
+		// buttons
+			$btn-bg	: white;
+			// Units \\
 		$bdr-rad	: 10px;
 		$pd-li		: 20px;
+
 	// MIXINS
+	@mixin border($radius, $bgc, $init...){
+		background-color: $bgc;
+		border: $init;
+		border-radius: $radius;
+		color: $init;
+		@include open();
+		font-weight: 400;
+	}
+
 	@mixin time($time...){
 		-webkit-transition: $time;
 		-moz-transition: $time;
@@ -47,9 +60,11 @@
 	text-decoration: none;
 }
 body{
+	
 	@include serif;
 	background: rgba($bg-body,1);
 	// @include vendattr(transition, .25s all); vendval(background,'rgb(125,90,90)');
+	/* Headings */
 	h1, h2, h3, h4, h5, h6{
 		small{
 			@include sans;
@@ -222,37 +237,16 @@ body{
 		margin: 1% 0 0 0;
 		padding: 12px 0 .5px 0;
 	}
-	// div.overlay{
-	// 	background-image: url(../img/med.jpg);
-	// 	background-size: 100%;
-	// 	content: "yes";
-	// 	display: block;
-	// 	height: 300px;
-	// 	margin: 2em;
-	// 	&::before{
-	// 		background-color: rgba($gold,.5);
-	// 		content: "";
-	// 		display: block;
-	// 		position: absolute;
-	// 			// top: 0;
-	// 			// left: 0;
-	// 		width: 538px;
-	// 		height: 300px;
-	// 	}
-	// 	&::after{
-	// 		color: white;
-	// 		content: "ITALIA";
-	// 		display: block;
-	// 		@include open-heading;
-	// 		font-size: 5em;
-	// 		font-weight: 800;
-	// 		letter-spacing: .125em;
-	// 		margin: auto;
-	// 		position: relative;
-	// 			top: 37%;
-	// 			// right: auto;
-	// 			// left: 2.125em;
-	// 		text-align: center;
-	// 	}
+	/* Style Classes */
+	// .ani{
+	//	@include lr-ani(1,left,.25s,$gold);
 	// }
+	/* Styled Element */
+	button{
+		@include border(5px, $btn-bg , $blue 1px solid);
+		&.ani{
+			@include ctc(1, 60deg,.5s,$blue);
+			@include rad(1,center,.2s, $blue);
+		}
+	}
 }
