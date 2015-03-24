@@ -40,7 +40,7 @@
 		}
 		@mixin sans(){
 			font-family: $fontstack-ss;
-			font-weight: 300;
+			font-weight: 400;
 		}
 			@mixin open(){
 				font-family: $fontstack-os;
@@ -57,7 +57,6 @@
 		@mixin mono(){
 			font-family: $fontstack-mo;
 		}
-	// FUNCTIONS
 
 .text-maroon{
 	color: $maroon;

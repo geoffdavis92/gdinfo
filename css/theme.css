@@ -74,7 +74,7 @@ body {
   /* Styled Element */ }
   body h1 small, body h2 small, body h3 small, body h4 small, body h5 small, body h6 small {
     font-family: "droid sans", "arial", sans-serif;
-    font-weight: 300; }
+    font-weight: 400; }
   body h1, body h2, body h3, body h4 {
     font-family: "droid serif", "curior", serif;
     font-weight: 700; }
@@ -139,9 +139,9 @@ body {
       font-family: "droid serif", "curior", serif; }
     body div.container div.main p {
       font-family: "droid sans", "arial", sans-serif;
-      font-weight: 300;
+      font-weight: 400;
       /* TYPOGRAPHY */
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: .75px;
       line-height: 1.5em; }
       body div.container div.main p code {
@@ -194,7 +194,7 @@ body {
         width: 25em; }
         body div.container div.main section[id] table.ref tr th {
           font-family: "droid sans", "arial", sans-serif;
-          font-weight: 300; }
+          font-weight: 400; }
         body div.container div.main section[id] table.ref tr td:first-of-type {
           text-align: center; }
   body footer {
