@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* GD.INFO _COLORS => CSS */
+.bg-lt {
+  background-color: #111; }
+
 	/*	___________________________
 		  SASS 	| CSS Output
 		 _______|__________________
@@ -52,6 +55,23 @@
 .text-gold {
   color: #EEC141; }
 
+.text-green {
+  color: #429D20; }
+
+.text-sans {
+  font-family: "droid sans", "arial", sans-serif;
+  font-weight: 400; }
+
+.text-sans-open {
+  font-family: "open sans", "arial", sans-serif;
+  font-weight: 300; }
+
+.text-sefif {
+  font-family: "droid serif", "curior", serif; }
+
+.text-mono {
+  font-family: "droid mono", monospace; }
+
 /* GD.INFO _ANIMATIONS => CSS */
 /*
 	lr-ani( interval , direction , timing , element color )
@@ -62,6 +82,64 @@
 		>	element color : color property of parent; declared 
 				in mixin for animation and element text
 */
+/* GD.INFO => PRINT */
+div.container.screen {
+  display: none; }
+
+hr.divider {
+  margin-bottom: 0px;
+  margin-top: 5px;
+  border-color: #111;
+  box-shadow: 0 0 15px 1px #d0d0d0; }
+
+div.container.print {
+  font-family: "open sans", "arial", sans-serif;
+  font-weight: 300; }
+
+img#logo {
+  height: 140px;
+  width: 140px; }
+
+h1 {
+  font-size: 5em; }
+
+h3 {
+  font-family: "droid serif", "curior", serif;
+  border-bottom: 1px solid #111;
+  padding-bottom: 5px; }
+
+div.row.contact-content {
+  margin-bottom: 25px; }
+div.row.col-title h4 {
+  color: #9D2042;
+  margin-bottom: -10px; }
+div.row section.job h4.title {
+  border-bottom: 1px solid #111;
+  margin-bottom: 0px;
+  padding-bottom: 5px; }
+div.row section.job i.organization-dates {
+  font-size: 10px;
+  line-height: 8px; }
+div.row section.job ul {
+  font-size: 12px; }
+
+@media only print {
+  header {
+    display: none; }
+
+  footer {
+    display: none; }
+
+  div.container.screen {
+    display: none; }
+
+  div.container.print {
+    display: initial;
+    font-family: "open sans", "arial", sans-serif;
+    font-weight: 300; }
+    div.container.print h1, div.container.print h2, div.container.print h3, div.container.print h4, div.container.print h5, div.container.print h6 {
+      font-family: "droid serif", "curior", serif;
+      font-weight: 700; } }
 /* GD.INFO THEME => CSS */
 *:active, *:hover {
   text-decoration: none; }
@@ -95,6 +173,7 @@ body {
       transition: 0.25s, all; }
     body header nav ul li {
       border-bottom: 3px solid transparent;
+      font-size: 18px;
       letter-spacing: 1px;
       padding: 0 20px 0 20px; }
       body header nav ul li:hover {
@@ -141,7 +220,7 @@ body {
       font-family: "droid sans", "arial", sans-serif;
       font-weight: 400;
       /* TYPOGRAPHY */
-      font-size: 14px;
+      font-size: 16px;
       letter-spacing: .75px;
       line-height: 1.5em; }
       body div.container div.main p code {
@@ -155,6 +234,10 @@ body {
         font-style: italic;
         padding: .5em;
         text-align: center; }
+    body div.container div.main ul {
+      font-family: "droid sans", "arial", sans-serif;
+      font-weight: 400;
+      font-size: 16px; }
     body div.container div.main blockquote {
       font-style: italic; }
       body div.container div.main blockquote::after {

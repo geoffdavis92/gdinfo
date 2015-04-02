@@ -1,38 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- <script src="//localhost:9000/"></script> -->
 	<meta charset="UTF-8"/>
 	<meta name="author" content="geoffdavis92"/>
 	<meta name="keywords" content=""/>
 	<title>Geoff Davis : Frontend Developer</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+	<!-- <link rel="stylesheet" href="css/fa.min.css"/> -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/theme.css"/>
-	<script src="js/lib/jquery.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
 </head>
 <body>
-	<header class="text-center">
-		<h1 class="h1">Geoff Davis</h1>
-		<nav class="center-block">
-			<ul class="list list-unstyled list-inline">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">Resum&eacute;</a></li>
-				<li><a href="#">Blog</a></li>
-			</ul>
-		</nav>
-	</header>
-	<div class="container">
+	<span id="header"></span>
+	<div class="container index">
 		<div class="col-xs-2"></div>
 		<div class="col-xs-8 main">
-			<h2 class="h2"><b>Front End Developer, Traveler, Art Enthusiast</b></h2>
-			<p class="">HTML, CSS, JS – Your foundations, my focus</p>
+			<h2 class="h2 text-center"><b>Front End Developer, Traveler, Life Enthusiast</b></h2>
+			<br>
+			<p>My name is Geoff Davis, and I am currently a Senior Web Design &amp; Interactive Media student at Harding University.</p>
+			<p>I love web development, design, learning, and exploring. Each of these skills have grown or developed during my time at University, and I am always looking for the next opportunity to learn.</p>
+			<p>Throughout my academic career, I have focused on learning the most current basic web technologies, including <i class="fa fa-html5 text-orange"></i> HTML5, <i class="fa fa-css3 text-blue"></i> CSS3, <i class="fa fa-cog text-gold"></i> JavaScript (ECMAScript 5).
+			</p>
 		</div>
 		<div class="col-xs-2"></div>
 	</div>
-	<footer class="text-center"><p>
-		&copy;2015 geoffdavis92 | site map
-	</p></footer>
+	<span id="footer"></span>
+	<script src="js/ajax.js"></script>
 	<script src="js/init.js"></script>
 	<script>
 	var url = document.URL;

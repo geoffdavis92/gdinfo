@@ -7,3 +7,7 @@ function hover(d){			// d => 20
 		Log(logit);
 	}
 }
+
+function print(){
+	// Button to print .html page?
+}

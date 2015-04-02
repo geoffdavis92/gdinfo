@@ -4,6 +4,7 @@
 		@import "colors";
 		@import "fonts";
 		@import "animations";
+		@import "print";
 
 	// VARIABLES
 			// Colors \\
@@ -91,6 +92,7 @@ body{
 			ul{
 				li{
 					border-bottom: 3px solid $t;
+					font-size: 18px;
 					letter-spacing: 1px;
 					padding: 0 $pd-li 0 $pd-li;
 					&:hover{
@@ -146,7 +148,7 @@ body{
 			p{
 				@include sans;
 				/* TYPOGRAPHY */
-				font-size: 14px;
+				font-size: 16px;
 				letter-spacing: .75px;
 				line-height: 1.5em;
 				code{
@@ -164,6 +166,10 @@ body{
 					padding: .5em;
 					text-align: center;
 				}
+			}
+			ul{
+				@include sans;
+				font-size: 16px;
 			}
 			blockquote{
 				font-style: italic;

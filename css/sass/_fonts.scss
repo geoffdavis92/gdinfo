@@ -1,6 +1,7 @@
 // GD.INFO : _FONTS => SCSS \\
 /* GD.INFO _FONTS => CSS */
-	// @FONT-FACE
+	// Imports
+		//@import "../fonts/fa-icons/scss/font-awesome";
 		@font-face { /* serif */
 			font-family: 'droid serif';
 			src:url('fonts/droid/serif/droidserif.ttf') format(truetype), /* 400 */
@@ -73,6 +74,22 @@
 .text-gold{
 	color: $gold;
 }
+.text-green{
+	color: $green;
+}
+.text-sans{
+	@include sans;
+}
+.text-sans-open{
+	@include open;
+}
+.text-sefif{
+	@include serif;
+}
+.text-mono{
+	@include mono;
+}
+
 		// $maroon	: #9D2042;
 		// $blue	: #20429D;
 		// $green	: #429D20;

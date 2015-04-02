@@ -1,0 +1,68 @@
+/* GD.INFO => PRINT */
+div.container.screen{ display: none; }
+
+// Send to @media only print
+hr.divider{ 
+	margin-bottom: 0px;
+	margin-top: 5px;
+	border-color: $base;
+	box-shadow: 0 0 15px 1px $base75;
+	}
+div.container.print{
+	@include open;
+}
+img#logo{
+	height: 140px;
+	width: 140px;
+}
+h1{
+	font-size: 5em;
+}
+h3{
+	@include serif;
+	border-bottom: 1px solid $base;
+	padding-bottom: 5px;
+}
+div.row{
+	&.contact-content{
+		margin-bottom: 25px;
+	}
+	&.col-title{
+		h4{
+			color: $maroon;
+			margin-bottom: -10px;
+		}
+	}
+	section.job{
+		h4.title{
+			border-bottom: 1px solid $base;
+			margin-bottom: 0px;
+			padding-bottom: 5px;
+		}
+		i.organization-dates{
+			font-size: 10px;
+			line-height: 8px;
+		}
+		ul{
+			font-size: 12px;
+		}
+	}
+}
+
+@media only print{
+	body{ 
+		// margin: 1in;
+	}
+	header{ display: none; }
+	footer{ display: none; }
+	div.container.screen{ display: none; }
+	div.container.print{
+		display: initial;
+		@include open;
+
+		h1, h2, h3, h4, h5, h6{
+			@include serif-heading;
+		}
+
+	}
+}

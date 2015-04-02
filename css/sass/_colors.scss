@@ -20,8 +20,14 @@
 		$orange	: #9D4220;
 		$gold	: #EEC141;
 	// MIXINS
+	@mixin bg-lt(){
+		background-color: $base;
+	}
 	// FUNCTIONS
-	
+	// Styles
+	.bg-lt{
+		@include bg-lt;
+	}
 	/*	___________________________
 		  SASS 	| CSS Output
 		 _______|__________________
