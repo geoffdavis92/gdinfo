@@ -23,11 +23,34 @@
 	@mixin bg-lt(){
 		background-color: $base;
 	}
-	// FUNCTIONS
-	// Styles
-	.bg-lt{
-		@include bg-lt;
+	@mixin bg($color){
+		background-color: $color;
 	}
+	// FUNCTIONS
+// Styles
+.bg-lt{
+	@include bg-lt;
+}
+.bg-orange{
+	@include bg($orange);
+	@include time(.3s, background-color);
+}
+.bg-blue{
+	@include bg($blue);
+	@include time(.3s, background-color);
+}
+.bg-maroon{
+	@include bg($maroon);
+	@include time(.3s, background-color);
+}
+.bg-gold{
+	@include bg($gold);
+	@include time(.3s, background-color);
+}
+.bg-green{
+	@include bg($green);
+	@include time(.3s, background-color);
+}
 	/*	___________________________
 		  SASS 	| CSS Output
 		 _______|__________________

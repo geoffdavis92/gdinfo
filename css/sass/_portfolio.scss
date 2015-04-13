@@ -1,0 +1,22 @@
+// GD.INFO : _PORTFOLIO => SCSS \\
+/* GD.INFO _PORTFOLIO => CSS */
+
+/* Item featured in /Portfolio */
+div.portfolio.item{
+	h2.heading{
+		padding: 0 0 7px 0;
+		border-bottom: 1px $base75 solid;
+	}
+	h3.subheading{
+		border-bottom: 1px $base75 solid;
+		padding: 0 0 5px 0;
+		width: 25%;
+		& strong{
+			color: black;
+		}
+	}
+	pre.fix-h{
+		height: 250px;
+		overflow-y: scroll;
+	}
+}

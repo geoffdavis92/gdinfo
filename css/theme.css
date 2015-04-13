@@ -3,6 +3,41 @@
 .bg-lt {
   background-color: #111; }
 
+.bg-orange {
+  background-color: #9D4220;
+  -webkit-transition: 0.3s, background-color;
+  -moz-transition: 0.3s, background-color;
+  -o-transition: 0.3s, background-color;
+  transition: 0.3s, background-color; }
+
+.bg-blue {
+  background-color: #20429D;
+  -webkit-transition: 0.3s, background-color;
+  -moz-transition: 0.3s, background-color;
+  -o-transition: 0.3s, background-color;
+  transition: 0.3s, background-color; }
+
+.bg-maroon {
+  background-color: #9D2042;
+  -webkit-transition: 0.3s, background-color;
+  -moz-transition: 0.3s, background-color;
+  -o-transition: 0.3s, background-color;
+  transition: 0.3s, background-color; }
+
+.bg-gold {
+  background-color: #EEC141;
+  -webkit-transition: 0.3s, background-color;
+  -moz-transition: 0.3s, background-color;
+  -o-transition: 0.3s, background-color;
+  transition: 0.3s, background-color; }
+
+.bg-green {
+  background-color: #429D20;
+  -webkit-transition: 0.3s, background-color;
+  -moz-transition: 0.3s, background-color;
+  -o-transition: 0.3s, background-color;
+  transition: 0.3s, background-color; }
+
 	/*	___________________________
 		  SASS 	| CSS Output
 		 _______|__________________
@@ -40,6 +75,91 @@
   font-family: 'droid mono';
   src: url("fonts/droid/mono/droidsansmono.ttf") format(truetype);
   /* 400 */ }
+/* Socicons CSS */
+@font-face {
+  font-family: 'si';
+  src: url("fonts/socicon/socicon.eot");
+  src: url("fonts/socicon/socicon.eot?#iefix") format("embedded-opentype"), url("fonts/socicon/socicon.woff") format("woff"), url("fonts/socicon/socicon.ttf") format("truetype"), url("fonts/socicon/socicon.svg#icomoonregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: si;
+    src: url(fonts/socicon/socicon.svg) format(svg); } }
+.soc {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.soc li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1; }
+
+.soc li a {
+  font-family: si !important;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-transition: .1s;
+  -ms-transition: .1s;
+  -moz-transition: .1s;
+  -webkit-transition: .1s;
+  transition: .1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 27px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  margin-right: 10px;
+  color: white;
+  background-color: #9D2042; }
+
+.soc a:hover {
+  z-index: 2;
+  background-color: #b13456 !important; }
+
+.soc-icon-last {
+  margin: 0 !important; }
+
+.soc-email1:before {
+  content: '<'; }
+
+.soc-linkedin:before {
+  content: 'j'; }
+
+.soc-github:before {
+  content: 'Q'; }
+
+.soc-twitter:before {
+  content: 'a'; }
+
+.soc-skype:before {
+  content: 'g'; }
+
+.soc-pinterest:before {
+  content: 'd'; }
+
+/* Color Helpers */
 .text-maroon {
   color: #9D2042; }
 
@@ -58,6 +178,7 @@
 .text-green {
   color: #429D20; }
 
+/* Font-style Helpers */
 .text-sans {
   font-family: "droid sans", "arial", sans-serif;
   font-weight: 400; }
@@ -82,64 +203,21 @@
 		>	element color : color property of parent; declared 
 				in mixin for animation and element text
 */
-/* GD.INFO => PRINT */
-div.container.screen {
-  display: none; }
+/* GD.INFO _PORTFOLIO => CSS */
+/* Item featured in /Portfolio */
+div.portfolio.item h2.heading {
+  padding: 0 0 7px 0;
+  border-bottom: 1px #d0d0d0 solid; }
+div.portfolio.item h3.subheading {
+  border-bottom: 1px #d0d0d0 solid;
+  padding: 0 0 5px 0;
+  width: 25%; }
+  div.portfolio.item h3.subheading strong {
+    color: black; }
+div.portfolio.item pre.fix-h {
+  height: 250px;
+  overflow-y: scroll; }
 
-hr.divider {
-  margin-bottom: 0px;
-  margin-top: 5px;
-  border-color: #111;
-  box-shadow: 0 0 15px 1px #d0d0d0; }
-
-div.container.print {
-  font-family: "open sans", "arial", sans-serif;
-  font-weight: 300; }
-
-img#logo {
-  height: 140px;
-  width: 140px; }
-
-h1 {
-  font-size: 5em; }
-
-h3 {
-  font-family: "droid serif", "curior", serif;
-  border-bottom: 1px solid #111;
-  padding-bottom: 5px; }
-
-div.row.contact-content {
-  margin-bottom: 25px; }
-div.row.col-title h4 {
-  color: #9D2042;
-  margin-bottom: -10px; }
-div.row section.job h4.title {
-  border-bottom: 1px solid #111;
-  margin-bottom: 0px;
-  padding-bottom: 5px; }
-div.row section.job i.organization-dates {
-  font-size: 10px;
-  line-height: 8px; }
-div.row section.job ul {
-  font-size: 12px; }
-
-@media only print {
-  header {
-    display: none; }
-
-  footer {
-    display: none; }
-
-  div.container.screen {
-    display: none; }
-
-  div.container.print {
-    display: initial;
-    font-family: "open sans", "arial", sans-serif;
-    font-weight: 300; }
-    div.container.print h1, div.container.print h2, div.container.print h3, div.container.print h4, div.container.print h5, div.container.print h6 {
-      font-family: "droid serif", "curior", serif;
-      font-weight: 700; } }
 /* GD.INFO THEME => CSS */
 *:active, *:hover {
   text-decoration: none; }
@@ -159,134 +237,129 @@ body {
   body h5, body h6 {
     font-family: "droid sans", "arial", sans-serif;
     font-weight: 700; }
-  body header {
+  body header, body span#header {
     background: #9D2042;
     margin-top: -1.75%; }
-    body header h1.h1 {
+    body header h1.h1, body span#header h1.h1 {
       color: white;
       font-size: 3.75em;
       padding: 15px 0 0 0; }
-    body header nav a, body header nav li {
+    body header nav a, body header nav li, body span#header nav a, body span#header nav li {
       -webkit-transition: 0.25s, all;
       -moz-transition: 0.25s, all;
       -o-transition: 0.25s, all;
       transition: 0.25s, all; }
-    body header nav ul li {
+    body header nav ul li, body span#header nav ul li {
       border-bottom: 3px solid transparent;
+      color: white;
       font-size: 18px;
       letter-spacing: 1px;
       padding: 0 20px 0 20px; }
-      body header nav ul li:hover {
-        border-bottom: 3px solid #d0d0d0; }
-        body header nav ul li:hover a {
-          color: #d0d0d0 !important;
+      body header nav ul li:hover, body span#header nav ul li:hover {
+        border-bottom: 3px solid white; }
+        body header nav ul li:hover a, body span#header nav ul li:hover a {
+          color: white;
           text-decoration: none; }
-      body header nav ul li:active {
+      body header nav ul li:active, body span#header nav ul li:active {
         -webkit-transition: 0, all;
         -moz-transition: 0, all;
         -o-transition: 0, all;
         transition: 0, all;
-        border-bottom-color: white; }
-        body header nav ul li:active a:active {
-          -webkit-transition: 0, all;
-          -moz-transition: 0, all;
-          -o-transition: 0, all;
-          transition: 0, all;
-          color: white !important; }
-      body header nav ul li a {
-        text-decoration: none; }
-        body header nav ul li a:link {
+        border-bottom-color: #EEC141 !important;
+        color: #EEC141 !important; }
+        body header nav ul li:active a, body span#header nav ul li:active a {
+          color: #EEC141; }
+          body header nav ul li:active a:link, body span#header nav ul li:active a:link {
+            color: #EEC141; }
+          body header nav ul li:active a:hover, body span#header nav ul li:active a:hover {
+            color: #EEC141; }
+          body header nav ul li:active a:active, body span#header nav ul li:active a:active {
+            -webkit-transition: 0, all;
+            -moz-transition: 0, all;
+            -o-transition: 0, all;
+            transition: 0, all;
+            color: #EEC141; }
+      body header nav ul li a, body span#header nav ul li a {
+        text-decoration: none;
+        color: white !important; }
+        body header nav ul li a:link, body span#header nav ul li a:link {
           color: white; }
-        body header nav ul li a:active {
-          color: white; }
-        body header nav ul li a:visited {
-          color: white; }
-    body header.fixed {
+    body header.fixed, body span#header.fixed {
       background: maroon;
       color: white;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%; }
-      body header.fixed h1 {
+      body header.fixed h1, body span#header.fixed h1 {
         outline: 2px solid gold; }
-  body div.container div.main {
-    background-color: white;
-    border: 2px solid #d0d0d0;
-    border-radius: 10px; }
-    body div.container div.main h2, body div.container div.main h3, body div.container div.main h4 {
-      font-family: "droid serif", "curior", serif; }
-    body div.container div.main p {
-      font-family: "droid sans", "arial", sans-serif;
-      font-weight: 400;
-      /* TYPOGRAPHY */
-      font-size: 16px;
-      letter-spacing: .75px;
-      line-height: 1.5em; }
-      body div.container div.main p code {
-        font-family: "droid mono", monospace; }
-      body div.container div.main p.pullquote {
-        border-top: 5px solid rgba(238, 193, 65, 0.25);
-        border-bottom: 5px solid rgba(238, 193, 65, 0.25);
-        color: #EEC141;
-        font-family: "droid serif", "curior", serif;
-        font-size: 1.75em;
-        font-style: italic;
-        padding: .5em;
-        text-align: center; }
-    body div.container div.main ul {
-      font-family: "droid sans", "arial", sans-serif;
-      font-weight: 400;
-      font-size: 16px; }
-    body div.container div.main blockquote {
-      font-style: italic; }
-      body div.container div.main blockquote::after {
-        content: "– " attr(data-source);
-        font-size: .75em;
-        font-style: initial;
-        padding-left: 25px; }
-    body div.container div.main section[id] {
-      margin-left: 15px; }
-      body div.container div.main section[id] p {
-        margin-left: 25px; }
-        body div.container div.main section[id] p samp {
-          background-color: white;
-          border-radius: 3px;
-          color: #63309D;
-          font-size: .9em;
-          padding: 3px; }
-          body div.container div.main section[id] p samp .comment {
-            background-color: #f6f6f6;
-            color: #848484; }
-            body div.container div.main section[id] p samp .comment::before {
-              content: "// "; }
-          body div.container div.main section[id] p samp.comment {
-            background-color: #f6f6f6;
-            color: #848484; }
-            body div.container div.main section[id] p samp.comment::before {
-              content: "// "; }
-      body div.container div.main section[id] pre#php {
+  body div.container div.main h2, body div.container div.main h3, body div.container div.main h4 {
+    font-family: "droid serif", "curior", serif; }
+  body div.container div.main p {
+    font-family: "droid sans", "arial", sans-serif;
+    font-weight: 400;
+    /* TYPOGRAPHY */
+    font-size: 16px;
+    letter-spacing: .75px;
+    line-height: 1.5em; }
+    body div.container div.main p code {
+      font-family: "droid mono", monospace; }
+    body div.container div.main p.pullquote {
+      border-top: 5px solid rgba(238, 193, 65, 0.25);
+      border-bottom: 5px solid rgba(238, 193, 65, 0.25);
+      color: #EEC141;
+      font-family: "droid serif", "curior", serif;
+      font-size: 1.75em;
+      font-style: italic;
+      padding: .5em;
+      text-align: center; }
+  body div.container div.main ul {
+    font-family: "droid sans", "arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px; }
+  body div.container div.main blockquote {
+    font-style: italic; }
+    body div.container div.main blockquote::after {
+      content: "– " attr(data-source);
+      font-size: .75em;
+      font-style: initial;
+      padding-left: 25px; }
+  body div.container div.main section[id] {
+    margin-left: 15px; }
+    body div.container div.main section[id] p {
+      margin-left: 25px; }
+      body div.container div.main section[id] p samp {
         background-color: white;
-        border-color: #e5d9f3;
-        color: #a377d5;
-        font-size: .75em;
-        margin-left: 25px;
+        border-radius: 3px;
+        color: #63309D;
+        font-size: .9em;
         padding: 3px; }
-      body div.container div.main section[id] table.ref {
-        margin: 0 auto 0 auto;
-        width: 25em; }
-        body div.container div.main section[id] table.ref tr th {
-          font-family: "droid sans", "arial", sans-serif;
-          font-weight: 400; }
-        body div.container div.main section[id] table.ref tr td:first-of-type {
-          text-align: center; }
-  body footer {
-    background: #9D2042;
-    color: white;
-    font-size: 0.85em;
-    margin: 1% 0 0 0;
-    padding: 12px 0 .5px 0; }
-  body button {
+        body div.container div.main section[id] p samp .comment {
+          background-color: #f6f6f6;
+          color: #848484; }
+          body div.container div.main section[id] p samp .comment::before {
+            content: "// "; }
+        body div.container div.main section[id] p samp.comment {
+          background-color: #f6f6f6;
+          color: #848484; }
+          body div.container div.main section[id] p samp.comment::before {
+            content: "// "; }
+    body div.container div.main section[id] pre#php {
+      background-color: white;
+      border-color: #e5d9f3;
+      color: #a377d5;
+      font-size: .75em;
+      margin-left: 25px;
+      padding: 3px; }
+    body div.container div.main section[id] table.ref {
+      margin: 0 auto 0 auto;
+      width: 25em; }
+      body div.container div.main section[id] table.ref tr th {
+        font-family: "droid sans", "arial", sans-serif;
+        font-weight: 400; }
+      body div.container div.main section[id] table.ref tr td:first-of-type {
+        text-align: center; }
+  body div.container button {
     background-color: white;
     border: #20429D 1px solid;
     border-radius: 5px;
@@ -294,7 +367,7 @@ body {
     font-family: "open sans", "arial", sans-serif;
     font-weight: 300;
     font-weight: 400; }
-    body button.ani {
+    body div.container button.ani {
       border: 1px solid #20429D;
       color: #20429D;
       -webkit-animation: lr-ani-rev; }
@@ -602,7 +675,7 @@ body {
   0% {
     color: #20429d;
     background: -webkit-linear-gradient(60deg, rgba(32, 66, 157, 0) 0%, white 0%, white 100%); } }
-      body button.ani:hover {
+      body div.container button.ani:hover {
         -webkit-animation: ctc 0.5s;
         animation: ctc 0.5s;
         color: white;
@@ -911,9 +984,9 @@ body {
   100% {
     color: white;
     background: -webkit-linear-gradient(60deg, #20429d 100%, white 100%, white 100%); } }
-      body button.ani:active {
+      body div.container button.ani:active {
         -webkit-animation-play-state: paused; }
-      body button.ani:active {
+      body div.container button.ani:active {
         background-color: white;
         color: #20429D;
         -webkit-animation: rad 0.2s; }
@@ -1124,5 +1197,36 @@ body {
     background: -webkit-radial-gradient(center, white 100%, #20429d 100%, #20429d 100%); }
   to {
     color: #20429D; } }
+  body div.container ul.skill.list {
+    margin: 0 0 0 52px; }
+    body div.container ul.skill.list li.hv {
+      border-radius: 10px;
+      cursor: initial;
+      padding: 5px 15px 5px 0; }
+      body div.container ul.skill.list li.hv:hover {
+        -webkit-transition: 0.3s, all;
+        -moz-transition: 0.3s, all;
+        -o-transition: 0.3s, all;
+        transition: 0.3s, all;
+        color: white;
+        padding: 5px 3px 5px 12px; }
+  body footer, body span#footer {
+    background: #9D2042;
+    color: white;
+    font-size: 0.95em;
+    margin: 1% 0 0 0;
+    padding: 12px 0 .5px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%; }
+    body footer a:link, body span#footer a:link {
+      color: white;
+      text-decoration: none; }
+    body footer a:hover, body span#footer a:hover {
+      color: #d0d0d0; }
+    body footer a:visited, body span#footer a:visited {
+      color: white; }
+    body footer a:active, body span#footer a:active {
+      color: #EEC141; }
 
 /*# sourceMappingURL=theme.css.map */

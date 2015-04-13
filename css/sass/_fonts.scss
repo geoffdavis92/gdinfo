@@ -26,6 +26,7 @@
 			font-family: 'droid mono';
 			src:url('fonts/droid/mono/droidsansmono.ttf') format(truetype); /* 400 */
 		}
+	@import "socicons";
 	// VARIABLES
 		$fontstack-sf	: 'droid serif', 'curior', serif;
 		$fontstack-ss	: 'droid sans', 'arial', sans-serif;
@@ -58,7 +59,7 @@
 		@mixin mono(){
 			font-family: $fontstack-mo;
 		}
-
+/* Color Helpers */
 .text-maroon{
 	color: $maroon;
 }
@@ -77,6 +78,7 @@
 .text-green{
 	color: $green;
 }
+/* Font-style Helpers */
 .text-sans{
 	@include sans;
 }

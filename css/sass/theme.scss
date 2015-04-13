@@ -1,29 +1,4 @@
 // GD.INFO : THEME => SCSS \\
-
-	// IMPORTS
-		@import "colors";
-		@import "fonts";
-		@import "animations";
-		@import "print";
-
-	// VARIABLES
-			// Colors \\
-		$bg-body	: $base9;
-		$bg-main	: white;
-		$bdr-main	: $base75;
-		$ftr		: white;
-		$hdr-h1		: $ftr;
-		$link 		: $hdr-h1;
-		$link-h		: $base75;
-		$link-a		: $link;
-		$pq			: $gold;
-		$pq-lt		: rgba($pq,.25);
-		// buttons
-			$btn-bg	: white;
-			// Units \\
-		$bdr-rad	: 10px;
-		$pd-li		: 20px;
-
 	// MIXINS
 	@mixin border($radius, $bgc, $init...){
 		background-color: $bgc;
@@ -54,6 +29,32 @@
 		#{$attr} : -o-#{$val};
 		#{$attr} : #{$val};
 	}
+
+	// IMPORTS
+		@import "colors";
+		@import "fonts";
+		@import "animations";
+		@import "portfolio";
+		// @import "print";
+
+	// VARIABLES
+			// Colors \\
+		$bg-body	: $base9;
+		$bg-main	: white;
+		$bdr-main	: $base75;
+		$ftr		: white;
+		$hdr-h1		: $ftr;
+		$link 		: $hdr-h1;
+		$link-h		: $base75;
+		$link-a		: $link;
+		$pq			: $gold;
+		$pq-lt		: rgba($pq,.25);
+		// buttons
+			$btn-bg	: white;
+			// Units \\
+		$bdr-rad	: 10px;
+		$pd-li		: 20px;
+
 	// FUNCTIONS
 
 /* GD.INFO THEME => CSS */
@@ -77,7 +78,7 @@ body{
 	h5, h6{
 		@include sans-heading; 
 	}
-	header{
+	header, span#header{
 		background: $maroon;
 		margin-top: -1.75%;
 		h1.h1{
@@ -92,35 +93,47 @@ body{
 			ul{
 				li{
 					border-bottom: 3px solid $t;
+					color: $link;
 					font-size: 18px;
 					letter-spacing: 1px;
 					padding: 0 $pd-li 0 $pd-li;
 					&:hover{
-						border-bottom: 3px solid $link-h;
+						border-bottom: 3px solid $white;
 						a{
-							color: $link-h !important;
+							color: $white;
 							text-decoration: none;
 						}
 					}
 					&:active{
 						@include time(0,all);
-						border-bottom-color: $link-a;
-						a:active{
-							@include time(0,all);
-							color: white !important;
+						border-bottom-color: $gold !important;
+						color: $gold !important;
+						a{
+							color: $gold;
+							&:link{
+								color: $gold;
+							}
+							&:hover{
+								color: $gold;
+							}
+							&:active{
+								@include time(0,all);
+								color: $gold;
+							}
 						}
 					}
 					a{
 						text-decoration: none;
+						color: $white !important;
 						&:link{
 							color: $link;
 						}
-						&:active{
-							color: $link-a;
-						}
-						&:visited{
-							color: $link;
-						}
+						// &:visited{
+						// 	color: $link;
+						// }
+						// &:active{
+						// 	color: $gold;
+						// }
 					}
 				}
 			}
@@ -139,9 +152,9 @@ body{
 	}
 	div.container{
 		div.main{
-			background-color: $bg-main;
-			border: 2px solid $bdr-main;
-			border-radius: $bdr-rad;
+			// background-color: $bg-main;
+			// border: 2px solid $bdr-main;
+			// border-radius: $bdr-rad;
 			h2, h3, h4{
 				@include serif;
 			}
@@ -231,28 +244,59 @@ body{
 								text-align: center;
 							}
 						}
-					}
-				}
+					} // /table.ref
+				} // /.section[id]
+			} // /.section
+		} // /.main
+		button{
+			@include border(5px, $btn-bg , $blue 1px solid);
+			&.ani{
+				@include ctc(1, 60deg,.5s,$blue);
+				@include rad(1,center,.2s, $blue);
+			}
+		} // /button
+		ul.skill.list{
+			margin: 0 0 0 52px;
+			li.hv{
+				border-radius: 10px;
+				cursor: initial;
+				padding: 5px 15px 5px 0;
+				&:hover{
+					@include time(.3s, all);
+					color: white;
+					padding: 5px 3px 5px 12px;
+				} // /li.hv:hover
+			} // /li.hv
+		} // /.skill.list
+	} // /.controller
+	footer,span#footer{
+		background: $maroon;
+		color: $ftr;
+		font-size: (1em * .95);
+		margin: 1% 0 0 0;
+		padding: 12px 0 .5px 0;
+		position: relative;
+		bottom: 0;
+		width: 100%;
+		a{
+			&:link{
+				color: $white;
+				text-decoration: none;
+			}
+			&:hover{
+				color: $base75;
+			}
+			&:visited{
+				color: $white;
+			}
+			&:active{
+				color: $gold;
 			}
 		}
 	}
-	footer{
-		background: $maroon;
-		color: $ftr;
-		font-size: (1em * .85);
-		margin: 1% 0 0 0;
-		padding: 12px 0 .5px 0;
-	}
 	/* Style Classes */
-	// .ani{
-	//	@include lr-ani(1,left,.25s,$gold);
-	// }
+		// .ani{
+		//	@include lr-ani(1,left,.25s,$gold);
+		// }
 	/* Styled Element */
-	button{
-		@include border(5px, $btn-bg , $blue 1px solid);
-		&.ani{
-			@include ctc(1, 60deg,.5s,$blue);
-			@include rad(1,center,.2s, $blue);
-		}
-	}
 }
