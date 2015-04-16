@@ -61,22 +61,46 @@
 		}
 /* Color Helpers */
 .text-maroon{
-	color: $maroon;
+	color: $maroon !important;
+	&#hv:hover{
+		color: lighten($maroon,25%) !important;
+	}
 }
 .text-blue{
-	color: $blue;
+	color: $blue !important;
+	&#hv:hover{
+		color: lighten($blue,25%) !important;
+	}
 }
 .text-violet{
-	color: $violet;
+	color: $violet !important;
+	&#hv:hover{
+		color: lighten($violet,25%) !important;
+	}
 }
 .text-orange{
-	color: $orange;
+	color: $orange !important;
+	&#hv:hover{
+		color: lighten($orange,25%) !important;
+	}
 }
 .text-gold{
-	color: $gold;
+	color: $gold !important;
+	&#hv:hover{
+		color: lighten($gold,25%) !important;
+	}
 }
 .text-green{
-	color: $green;
+	color: $green !important;
+	&#hv:hover{
+		color: lighten($green,25%) !important;
+	}
+}
+.text-base{
+	color: $base5 !important;
+	&#hv:hover{
+		color: lighten($base5,25%) !important;
+	}
 }
 /* Font-style Helpers */
 .text-sans{

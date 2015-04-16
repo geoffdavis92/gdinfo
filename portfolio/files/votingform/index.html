@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+	<title>Form Voting</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script src="../../../bower_components/jquery/dist/jquery.js"></script>
+</head>
+<body data-trace="votingform.html">
+<h1>Voting Form</h1>
+<form name="Club Voting Form" class="clubform">
+	<select id="list">
+	</select>
+</form>
+<button onclick="vote();">Vote!</button>
+
+<table id="display" cellpadding="none">
+<tr id="names"></tr>
+<tr id="votes"></tr>
+</table>
+
+<button onclick="reset();">Reset</button>
+
+<!-- ADD CSS LINK AND FOOTER -->
+<!-- <link rel="stylesheet" href="../sample_styles/portfolio.css"> -->
+
+<div class="gdinfo-portfolio">
+	<link rel="stylesheet" href="../sample_styles/portfolio.css">
+	<footer class="bg-base" id="itemFooter" style="margin-left: -3.1%">
+		<a class="block-center exit btn" onclick="window.close();">Back to Project</a>
+	</footer>
+</div>
+
+<script src="script.js"></script>
+
+<!-- MODAL -->
+<div class="modal">
+	<div class="content">
+		<h2>Are you new here?</h2>
+		<h3>We only allow new faces; please enter your name below!</h3>
+		<form id="namecheck">
+		<label for="name">Name: </label><input id="nameField" name="name" type="text">
+		</form>
+		<button class="close" onclick="checkName();">Submit</button>
+	</div>
+</div>
+<script src="modal-window.js"></script>
+<script src="modal-init.js"></script>
+</body>
+</html>

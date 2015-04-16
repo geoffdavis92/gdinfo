@@ -5,38 +5,58 @@
 
 .bg-orange {
   background-color: #9D4220;
-  -webkit-transition: 0.3s, background-color;
-  -moz-transition: 0.3s, background-color;
-  -o-transition: 0.3s, background-color;
-  transition: 0.3s, background-color; }
+  -webkit-transition: 0.15s, background-color;
+  -moz-transition: 0.15s, background-color;
+  -o-transition: 0.15s, background-color;
+  transition: 0.15s, background-color; }
+  .bg-orange.btn:hover {
+    background-color: #bd4f26; }
+  .bg-orange.btn {
+    color: white; }
 
 .bg-blue {
   background-color: #20429D;
-  -webkit-transition: 0.3s, background-color;
-  -moz-transition: 0.3s, background-color;
-  -o-transition: 0.3s, background-color;
-  transition: 0.3s, background-color; }
+  -webkit-transition: 0.15s, background-color;
+  -moz-transition: 0.15s, background-color;
+  -o-transition: 0.15s, background-color;
+  transition: 0.15s, background-color; }
+  .bg-blue.btn:hover {
+    background-color: #264fbd; }
+  .bg-blue.btn {
+    color: white; }
 
 .bg-maroon {
   background-color: #9D2042;
-  -webkit-transition: 0.3s, background-color;
-  -moz-transition: 0.3s, background-color;
-  -o-transition: 0.3s, background-color;
-  transition: 0.3s, background-color; }
+  -webkit-transition: 0.15s, background-color;
+  -moz-transition: 0.15s, background-color;
+  -o-transition: 0.15s, background-color;
+  transition: 0.15s, background-color; }
+  .bg-maroon.btn:hover {
+    background-color: #bd264f; }
+  .bg-maroon.btn {
+    color: white; }
 
 .bg-gold {
   background-color: #EEC141;
-  -webkit-transition: 0.3s, background-color;
-  -moz-transition: 0.3s, background-color;
-  -o-transition: 0.3s, background-color;
-  transition: 0.3s, background-color; }
+  -webkit-transition: 0.15s, background-color;
+  -moz-transition: 0.15s, background-color;
+  -o-transition: 0.15s, background-color;
+  transition: 0.15s, background-color; }
+  .bg-gold.btn:hover {
+    background-color: #f1cc64; }
+  .bg-gold.btn {
+    color: white; }
 
 .bg-green {
   background-color: #429D20;
-  -webkit-transition: 0.3s, background-color;
-  -moz-transition: 0.3s, background-color;
-  -o-transition: 0.3s, background-color;
-  transition: 0.3s, background-color; }
+  -webkit-transition: 0.15s, background-color;
+  -moz-transition: 0.15s, background-color;
+  -o-transition: 0.15s, background-color;
+  transition: 0.15s, background-color; }
+  .bg-green.btn:hover {
+    background-color: #4fbd26; }
+  .bg-green.btn {
+    color: white; }
 
 	/*	___________________________
 		  SASS 	| CSS Output
@@ -161,22 +181,39 @@
 
 /* Color Helpers */
 .text-maroon {
-  color: #9D2042; }
+  color: #9D2042 !important; }
+  .text-maroon#hv:hover, body div.container a.text-maroon:hover {
+    color: #de5e81 !important; }
 
 .text-blue {
-  color: #20429D; }
+  color: #20429D !important; }
+  .text-blue#hv:hover, body div.container a.text-blue:hover {
+    color: #5e81de !important; }
 
 .text-violet {
-  color: #63309D; }
+  color: #63309D !important; }
+  .text-violet#hv:hover, body div.container a.text-violet:hover {
+    color: #a377d5 !important; }
 
 .text-orange {
-  color: #9D4220; }
+  color: #9D4220 !important; }
+  .text-orange#hv:hover, body div.container a.text-orange:hover {
+    color: #de815e !important; }
 
 .text-gold {
-  color: #EEC141; }
+  color: #EEC141 !important; }
+  .text-gold#hv:hover, body div.container a.text-gold:hover {
+    color: #f8e7b6 !important; }
 
 .text-green {
-  color: #429D20; }
+  color: #429D20 !important; }
+  .text-green#hv:hover, body div.container a.text-green:hover {
+    color: #81de5e !important; }
+
+.text-base {
+  color: #919191 !important; }
+  .text-base#hv:hover, body div.container a.text-base:hover {
+    color: #d0d0d0 !important; }
 
 /* Font-style Helpers */
 .text-sans {
@@ -211,7 +248,7 @@ div.portfolio.item h2.heading {
 div.portfolio.item h3.subheading {
   border-bottom: 1px #d0d0d0 solid;
   padding: 0 0 5px 0;
-  width: 25%; }
+  width: 15%; }
   div.portfolio.item h3.subheading strong {
     color: black; }
 div.portfolio.item pre.fix-h {
@@ -225,6 +262,7 @@ div.portfolio.item pre.fix-h {
 body {
   font-family: "droid serif", "curior", serif;
   background: #f7f7f7;
+  overflow-y: scroll;
   /* Headings */
   /* Style Classes */
   /* Styled Element */ }
@@ -245,10 +283,10 @@ body {
       font-size: 3.75em;
       padding: 15px 0 0 0; }
     body header nav a, body header nav li, body span#header nav a, body span#header nav li {
-      -webkit-transition: 0.25s, all;
-      -moz-transition: 0.25s, all;
-      -o-transition: 0.25s, all;
-      transition: 0.25s, all; }
+      -webkit-transition: 0.15s, all;
+      -moz-transition: 0.15s, all;
+      -o-transition: 0.15s, all;
+      transition: 0.15s, all; }
     body header nav ul li, body span#header nav ul li {
       border-bottom: 3px solid transparent;
       color: white;
@@ -293,6 +331,27 @@ body {
       width: 100%; }
       body header.fixed h1, body span#header.fixed h1 {
         outline: 2px solid gold; }
+  body div.container a {
+    font-family: "droid serif", "curior", serif;
+    text-decoration: none; }
+    body div.container a:visited {
+      text-decoration: none; }
+    body div.container a.text-maroon:hover {
+      text-decoration: none; }
+    body div.container a.text-blue:hover {
+      text-decoration: none; }
+    body div.container a.text-violet:hover {
+      text-decoration: none; }
+    body div.container a.text-orange:hover {
+      text-decoration: none; }
+    body div.container a.text-gold:hover {
+      text-decoration: none; }
+    body div.container a.text-green:hover {
+      text-decoration: none; }
+    body div.container a.text-base:hover {
+      text-decoration: none; }
+    body div.container a:active {
+      text-decoration: none; }
   body div.container div.main h2, body div.container div.main h3, body div.container div.main h4 {
     font-family: "droid serif", "curior", serif; }
   body div.container div.main p {
@@ -359,6 +418,19 @@ body {
         font-weight: 400; }
       body div.container div.main section[id] table.ref tr td:first-of-type {
         text-align: center; }
+  body div.container div.main ul.skill.list {
+    cursor: default;
+    margin: 0 0 0 52px; }
+    body div.container div.main ul.skill.list li.hv {
+      border-radius: 10px;
+      padding: 5px 15px 5px 0; }
+      body div.container div.main ul.skill.list li.hv:hover {
+        -webkit-transition: 0.3s, all;
+        -moz-transition: 0.3s, all;
+        -o-transition: 0.3s, all;
+        transition: 0.3s, all;
+        color: white;
+        padding: 5px 3px 5px 12px; }
   body div.container button {
     background-color: white;
     border: #20429D 1px solid;
@@ -1197,19 +1269,6 @@ body {
     background: -webkit-radial-gradient(center, white 100%, #20429d 100%, #20429d 100%); }
   to {
     color: #20429D; } }
-  body div.container ul.skill.list {
-    margin: 0 0 0 52px; }
-    body div.container ul.skill.list li.hv {
-      border-radius: 10px;
-      cursor: initial;
-      padding: 5px 15px 5px 0; }
-      body div.container ul.skill.list li.hv:hover {
-        -webkit-transition: 0.3s, all;
-        -moz-transition: 0.3s, all;
-        -o-transition: 0.3s, all;
-        transition: 0.3s, all;
-        color: white;
-        padding: 5px 3px 5px 12px; }
   body footer, body span#footer {
     background: #9D2042;
     color: white;

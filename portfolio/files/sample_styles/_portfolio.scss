@@ -1,0 +1,50 @@
+// Portfolio SASS \\
+/* Portfolio CSS */
+
+		$t 			: transparent;
+		$base		: #111;
+		$base5		: lighten($base,50%);
+		$base75		: lighten($base,75%);
+		$base9		: lighten($base,90%);
+		$white		: white;
+
+		$pri-red	: #a00505; 
+		$pri-green	: #05a005;
+		$pri-blue	: #0505a0;
+
+		$maroon	: #9D2042;
+		$blue	: #20429D;
+		$green	: #429D20;
+		$violet	: #63309D;
+		$orange	: #9D4220;
+		$gold	: #EEC141;
+body{
+	overflow-y: scroll;
+}
+div.gdinfo-portfolio{
+	@import "bs-btns";
+	footer#itemFooter{
+		background-color: $base75;
+		box-shadow: 0 3px 9px $base5 inset;
+		padding: 1.25% 0 1.25% 0;
+		position: fixed;
+			bottom: 0;
+		width: 100%;
+		a{
+			border-color: $maroon;
+			color: $maroon;
+			font-weight: 200;
+			margin: 0 45%;
+			// padding: 5% 0 2.5% 0;
+			text-align: center;
+			width: 10%;
+			-webkit-transition: .2s all;
+			&:hover{
+				background-color: $maroon;
+				color: $white;
+				font-weight: 200;
+				-webkit-transition: .2s all;
+			}
+		}
+	}
+}

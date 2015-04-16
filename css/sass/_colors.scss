@@ -25,6 +25,9 @@
 	}
 	@mixin bg($color){
 		background-color: $color;
+		&.btn:hover{
+			background-color: lighten($color,7.5%);
+		}
 	}
 	// FUNCTIONS
 // Styles
@@ -33,23 +36,38 @@
 }
 .bg-orange{
 	@include bg($orange);
-	@include time(.3s, background-color);
+	@include time(.15s, background-color);
+	&.btn{
+		color: white;
+	}
 }
 .bg-blue{
 	@include bg($blue);
-	@include time(.3s, background-color);
+	@include time(.15s, background-color);
+	&.btn{
+		color: white;
+	}
 }
 .bg-maroon{
 	@include bg($maroon);
-	@include time(.3s, background-color);
+	@include time(.15s, background-color);
+	&.btn{
+		color: white;
+	}
 }
 .bg-gold{
 	@include bg($gold);
-	@include time(.3s, background-color);
+	@include time(.15s, background-color);
+	&.btn{
+		color: white;
+	}
 }
 .bg-green{
 	@include bg($green);
-	@include time(.3s, background-color);
+	@include time(.15s, background-color);
+	&.btn{
+		color: white;
+	}
 }
 	/*	___________________________
 		  SASS 	| CSS Output

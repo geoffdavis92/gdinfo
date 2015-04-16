@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Geoff Davis"/>
+    <meta name="keywords" content="Geoff,Geoffrey,T,Davis"/>
+    <title>Geoff's Portfolio | Club Voting Form</title>
+    <base href="../">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/theme.css"/>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+</head>
+<body data-type="page" data-title="votingform" data-ref="portfolio/files/votingform/index.html">
+	
+	<!-- REMOVE THIS!!! -->
+	<script>
+		var dt = $('body').attr('data-title');
+		var dr = $('body').attr('data-ref');
+		if( dt === "FOLDER TITLE" || dr === "PATH TO PROJECT INDEX") {
+			alert("Please check the `data-title` and `data-ref` attributes in the <body> tag. Then, delete this <script> tag.")
+		} else {
+            console.log(dt + "|" + dt);
+            console.log("All systems go!");
+        }
+	</script>
+
+    <span id="header"></span>
+    <div class="container portfolio item">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10 main">
+            <h2 class="heading text-center">
+                <div class="row">
+                    <div class="col-md-3"><a class="back pull-left btn bg-maroon">Back to Portfolio</a></div>
+                    <div class="col-md-6">Club Voting Form</div>
+                    <div class="col-md-3"><a class="launch pull-right btn bg-blue">Launch</a></div>
+                </div>
+            </h2>
+            <p></p>
+            <h3 class="subheading text-left"><em>HTML</em></h3>
+            <p>{{ Talk about the <code>.html</code>}}</p>
+<pre class="fix-h"><code> &lt;!-- HTML : Will need to escape characters --&gt;
+</code></pre>
+            <h3 class="subheading text-left"><em>CSS</em></h3>
+            <p>{{ Talk about the <code>.css</code>}}</p>
+            <p><strong>Code:</strong></p>
+            <pre class="fix-h"><code>/* CSS code */
+</code></pre>
+            <h3 class="subheading text-left"><em>Javascript</em></h3>
+            <p>{{ Talk about the <code>.js</code>}}</p>
+            <p><strong>Code:</strong></p>
+<pre class="fix-h"><code>// Javascript code
+</code></pre>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    <span id="footer"></span>
+    <script src="js/ajax.js"></script>
+    <script src="js/init.js"></script>
+</body>
+</html>

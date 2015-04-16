@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <script src="//localhost:9000/"></script> -->
     <meta charset="UTF-8"/>
     <meta name="author" content="Geoff Davis"/>
     <meta name="keywords" content="Geoff,Geoffrey,T,Davis,code,sample,javascript"/>
-    <title>Geoff's Portfolio | JS Code Sample</title>
+    <title>Geoff's Portfolio | Stress Tracking App</title>
     <base href="../">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-    <!-- <link rel="stylesheet" href="css/fa.min.css"/> -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/theme.css"/>
     <script src="bower_components/jquery/dist/jquery.js"></script>
 </head>
-<body>
+<body data-type="page" data-title="trackingapp" data-ref="portfolio/files/trackingapp/index.html">
     <span id="header"></span>
     <div class="container portfolio item">
         <div class="col-xs-1"></div>
         <div class="col-xs-10 main">
-            <a href="../" class="back btn btn-success">Back to Portfolio</a>
-            <h2 class="heading text-center">Tracking App <small>Tracking stress levels across time</small></h2>
+            <h2 class="heading text-center">
+                <div class="row">
+                    <div class="col-md-3"><a class="back pull-left btn bg-maroon">Back to Portfolio</a></div>
+                    <div class="col-md-6">Stress Tracking App</div>
+                    <div class="col-md-3"><a class="launch pull-right btn bg-blue">Launch</a></div>
+                </div>
+            </h2>
             <p></p>
             <h3 class="subheading text-left"><em>HTML</em></h3>
+            <p>Here is the scaffolding behind the app. It's pretty simple, utilizing HTML5 semantic tags. The form </p>
 <pre class="fix-h"><code>&lt;!DOCTYPE html&gt;
 &lt;head&gt;
     &lt;title&gt;Tracking App&lt;/title&gt;
@@ -51,8 +55,43 @@
 &lt;/body&gt;
 </code></pre>
             <h3 class="subheading text-left"><em>CSS</em></h3>
-            <h3 class="subheading text-left"><em>JavaScript</em></h3>
-            <p>The real engine behind the application. This script manages the several variables, events, and functions that produce the interactivity of the app.</p>
+            <p>The styling code for this app is very minimal; there is no theme that I followed, instead focusing on the interactive functionality. I did use some attribute filters, which is the first time in an actual project. I wrote and compiled all CSS through SASS (<code>.scss</code>) and utilized the workflow enhancement that it brings.</p>
+            <pre class="fix-h"><code>/* styles.css | trackingapp | geoff davis / gdavis5@harding.edu */
+div.content {
+  padding: 25px; }
+div.content p#timer, div.content p#stop {
+  text-align: left;
+  margin: 1% 0 1% 2%; }
+div.content button.control {
+  background-color: #304F63;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin: -1% 0 2.5% 2%;
+  padding: 6px; }
+div.content form * {
+  display: block;
+  margin-left: 2%; }
+div.content form input[type=range] {
+  width: 180px; }
+div.content form label[for=stressRange] {
+  font-size: .9em;
+  margin-left: 30px;
+  text-align: center;
+  width: 180px;
+  word-spacing: 4px; }
+div.content textarea#log {
+  resize: none;
+  margin: 0 0 0 2%; }
+div.content label[for=log] {
+  display: block;
+  font-size: 1.1em;
+  margin: 1% 0 .25% 2%; }
+
+/*# sourceMappingURL=styles.css.map */
+</code></pre>
+            <h3 class="subheading text-left"><em>Javascript</em></h3>
+            <p>The real engine behind the application. This was the first project that implemented a <code>setInterval()</code> function as part of the core processes. This Javascript file constructs and gives parameters to the timer, enables and disables buttons when appropriate, and logs the input data and metadata.</p>
             <p><strong>Code:</strong></p>
 <pre class="fix-h"><code>// script.js | trackingapp | geoff davis / gdavis5@harding.edu
 

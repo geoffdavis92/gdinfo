@@ -42,6 +42,20 @@ $('ul li.hv').each(function(){
 	})
 });
 
-$('button.btn.back').click(function(){
-	baseURL = $('base').attr('href');
+$('a.btn.back').click(function(){
+	var base = $('base').attr('href');
+	var path = window.location.pathname;
+	var split = path.split("/");
+	split.shift();
+	split.splice(2,1);
+	var ext = split[0]+"/"+split[1]+".html";
+	base = base + ext;
+	window.open(base,"_self");
 });
+$('a.btn.launch').click(function(){
+	var url = $('body').attr('data-ref');
+	var folder = $('body').attr('data-title');
+	window.open(url,"_blank");
+	// var url = $('body').attr('data-ref');
+	// window.open(url,"_self");
+})

@@ -1,0 +1,24 @@
+github.com, codepen.io, webdesignrepo.com, web_design.reddit.com, codecademy.com
+
+• OS: Mac OS X
+• Text Editor: Sublime Text 3
+    - Plugins: Packages Manager, SCSS Syntax, Emmett, Git 
+Gutter, SFTP, Bower
+• CLI: node.js, npm, Sass, Bower, Jekyll, Git
+• Frameworks: Bootstrap, jQuery, SASS (SCSS), AngularJS (basics), Jekyll
+• VCS: GitHub
+
+• I am eager to learn new frameworks, methods, and processes, whether unique to RocketFuel or an industry standard.
+• Previously applied for an internship at RocketFuel, as well as networked with RocketFuel employees, via John Lloyd and Jay Perdue of ALSAC/St. Jude (Summer 2014).
+• I am planning on making Memphis my home upon my graduation in May of 2015.
+
+~/desktop/geoffdavisresume.pdf
+~/github/geoffdavis-code-sample.pdf
+
+Captain Picard vs. Han Solo
+=====
+Captain Picard is a staunch leader and a brilliant tactician, who commands the USS Enterprise, a powerful ship. However, he finds a worthy adversary in Han Solo, who has wit, charm, and an agile vessel in the Millennium Falcon.
+
+I believe Han Solo will defeat Captain Picard; the Falcon is much smaller than the Enterprise, and will be able to outmaneuver the latter ship's defenses. Utilizing his wit and chance, Han will find a way to subdue the Enterprises' defenses, to provide a getaway opportunity at the least.
+
+If each leader had command of a fleet, it would be much more fair, but Captain Picard, tapping into his diplomatic and leadership traits, would be able to command his fleet to victory, wherein Han Solo's rogue nature and ego would send his fleet into disarray.
