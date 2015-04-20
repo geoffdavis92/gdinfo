@@ -211,7 +211,7 @@
     color: #81de5e !important; }
 
 .text-base {
-  color: #919191 !important; }
+  color: #111 !important; }
   .text-base#hv:hover, body div.container a.text-base:hover {
     color: #d0d0d0 !important; }
 
@@ -224,7 +224,7 @@
   font-family: "open sans", "arial", sans-serif;
   font-weight: 300; }
 
-.text-sefif {
+.text-serif {
   font-family: "droid serif", "curior", serif; }
 
 .text-mono {
@@ -352,6 +352,12 @@ body {
       text-decoration: none; }
     body div.container a:active {
       text-decoration: none; }
+  body div.container div.main div.jumbotron.profile {
+    background-image: url("../img/gd.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -175px;
+    background-size: cover;
+    height: 325px; }
   body div.container div.main h2, body div.container div.main h3, body div.container div.main h4 {
     font-family: "droid serif", "curior", serif; }
   body div.container div.main p {
@@ -372,6 +378,16 @@ body {
       font-style: italic;
       padding: .5em;
       text-align: center; }
+    body div.container div.main p.text-sans, body div.container div.main p *.text-sans {
+      font-family: "droid sans", "arial", sans-serif;
+      font-weight: 400; }
+    body div.container div.main p.text-sans-open, body div.container div.main p *.text-sans-open {
+      font-family: "open sans", "arial", sans-serif;
+      font-weight: 300; }
+    body div.container div.main p.text-serif, body div.container div.main p *.text-serif {
+      font-family: "droid serif", "curior", serif; }
+    body div.container div.main p.text-mono, body div.container div.main p *.text-mono {
+      font-family: "droid mono", monospace; }
   body div.container div.main ul {
     font-family: "droid sans", "arial", sans-serif;
     font-weight: 400;
@@ -383,6 +399,22 @@ body {
       font-size: .75em;
       font-style: initial;
       padding-left: 25px; }
+  body div.container div.main form label {
+    font-size: 16px;
+    font-family: "droid sans", "arial", sans-serif;
+    font-weight: 400;
+    width: 100%; }
+    body div.container div.main form label.form-control input {
+      border: none;
+      color: #111;
+      font-size: 12px;
+      padding-bottom: 3px;
+      padding-left: 3px;
+      width: 80%; }
+  body div.container div.main form input {
+    font-family: "droid mono", monospace; }
+    body div.container div.main form input.submit {
+      width: 100%; }
   body div.container div.main section[id] {
     margin-left: 15px; }
     body div.container div.main section[id] p {
@@ -1275,8 +1307,6 @@ body {
     font-size: 0.95em;
     margin: 1% 0 0 0;
     padding: 12px 0 .5px 0;
-    position: relative;
-    bottom: 0;
     width: 100%; }
     body footer a:link, body span#footer a:link {
       color: white;

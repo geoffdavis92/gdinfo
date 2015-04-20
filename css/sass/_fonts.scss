@@ -97,23 +97,23 @@
 	}
 }
 .text-base{
-	color: $base5 !important;
+	color: $base !important;
 	&#hv:hover{
 		color: lighten($base5,25%) !important;
 	}
 }
 /* Font-style Helpers */
 .text-sans{
-	@include sans;
+	@include sans();
 }
 .text-sans-open{
-	@include open;
+	@include open();
 }
-.text-sefif{
-	@include serif;
+.text-serif{
+	@include serif();
 }
 .text-mono{
-	@include mono;
+	@include mono();
 }
 
 		// $maroon	: #9D2042;

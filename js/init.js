@@ -59,3 +59,10 @@ $('a.btn.launch').click(function(){
 	// var url = $('body').attr('data-ref');
 	// window.open(url,"_self");
 })
+
+// Limit height/width of carousel images
+
+$('div.carousel-innner div.item img').css({
+		width: "250px", 
+		height: "100px"
+});
