@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<base href="http://localhost:8888/gdinfo/">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	</head>
+	<body marginwidth="0" marginheight="0" style="background-color: rgb(203,203,203); height: 100%; overflow-y: hidden;">
+	<div class="container" style="padding: 5px 0; background-color: rgb(205,205,205);">
+		<button class="center-block text-center btn btn-primary" id="close">Return to Page</button>
+	</div>
+		<embed src="portfolio/geoffdavisresume.pdf" type="application/pdf" height="95%" width="100%" name="plugin">
+		<!-- For production -->
+		<!-- <embed src="portfolio/geoffdavisresume.pdf" type="application/pdf" width="100%" name="plugin"> -->
+		<script src="js/init.js"></script>
+	<script>
+		$('button.print.default').click(function(){
+			window.close();
+		})
+		$('button#close').click(function(){
+			window.close();
+		})
+	</script>
+	</body>
+</html>
+

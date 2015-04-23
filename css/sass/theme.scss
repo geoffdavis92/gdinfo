@@ -48,7 +48,7 @@
 		@import "fonts";
 		@import "animations";
 		@import "portfolio";
-		// @import "print";
+		@import "print";
 
 	// VARIABLES
 			// Colors \\
@@ -75,7 +75,9 @@
 	text-decoration: none;
 }
 body{
-	
+	&[data-spy] {
+		position: relative;
+	}
 	@include serif;
 	background: rgba($bg-body,1);
 	overflow-y: scroll;
@@ -198,7 +200,7 @@ body{
 				&.profile {
 					background-image: url("../img/gd.jpg");
 					background-repeat: no-repeat;
-					background-position: 0 -175px;
+					background-position: 0 -263px;
 					background-size: cover;
 					height: 325px;
 				}
@@ -243,6 +245,16 @@ body{
 			ul{
 				@include sans();
 				font-size: 16px;
+				&.list.contact {
+					font-size: 18px;
+					vertical-align: middle;
+					li {
+						padding: 5px 0;
+					}
+					i { 
+						font-size: 24px;
+					}
+				}
 			}
 			blockquote{
 				font-style: italic;
@@ -275,9 +287,17 @@ body{
 				}
 			}
 			section{
+				.aH {
+					border-bottom: 1px solid $base;
+					font-style: italic;
+					padding-bottom: 5px;
+					width: 50%;
+				}
+
+
 				&[id]{
 					margin-left: 15px;
-
+					
 					p{
 						margin-left: 25px;
 						& samp{
@@ -343,13 +363,13 @@ body{
 			} // /.skill.list
 		} // /.main
 		button{
-			@include border(5px, $btn-bg , $blue 1px solid);
+			@include border(5px, auto , $blue 1px solid);
 			&.ani{
 				@include ctc(1, 60deg,.5s,$blue);
 				@include rad(1,center,.2s, $blue);
 			}
 		} // /button
-	} // /.controller
+	} // /.container
 	footer,span#footer{
 			// position: absolute;
 		background: $maroon;
@@ -376,9 +396,12 @@ body{
 			}
 		}
 	}
+	ul.nav.spyElement {
+		position: fixed;
+		top: 235px;
+	}
 	/* Style Classes */
 		// .ani{
 		//	@include lr-ani(1,left,.25s,$gold);
 		// }
-	/* Styled Element */
 } // /body

@@ -9,15 +9,23 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/theme.css"/>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
-<body data-type="page">
+<body data-type="page" data-spy="scroll" data-target="#navSpy">
 	<span id="header"></span>
 	<div class="container portfolio">
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
+		<div class="col-md-2" id="navSpy" role="navigation">
+			<ul class="nav nav-pills nav-stacked text-right spyElement">
+				<li><a href="#webProg">List Spy 1</a></li>
+				<li><a href="#webDesignWrite">List Spy 1</a></li>
+				<li><a href="#graphicDesign">List Spy 1</a></li>
+			</ul>
+		</div>
+		<div class="col-md-8 main">
 			<h1 class="text-center">Portfolio</h1>
+			
+			<!-- CAROUSEL 
 			<p class="text-center">Click the image to view the project profile.</p>
-			<!-- CAROUSEL -->
 			<div id="projectsCar" class="carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-target="#projectsCar" data-slide-to="0" class="active"></li>
@@ -26,7 +34,7 @@
 					<li data-target="#projectsCar" data-slide-to="3"></li>
 				</ol>
 
-				<!-- Wrapper for Slides -->
+				 Wrapper for Slides 
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
 						<a href="portfolio/trackingapp.html">
@@ -44,15 +52,9 @@
 							<p class="text-base">Club voting form using Javascript arrays and iteration.</p>
 						</div>
 					</div>
-					<!-- <div class="item">
-						
-					</div>
-					<div class="item">
-						
-					</div> -->
 				</div>
 
-				<!-- Left and Right Controls -->
+				Left and Right Controls				
 				<a href="#projectsCar" class="left carousel-control" role="button" data-slide="prev">
 					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 					<span class="sr-only">Previous</span>
@@ -61,7 +63,55 @@
 					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
 				</a>
-			</div>
+			</div> -->
+			<section id="webProg">
+				<h2 class="h2 text-center">Web Programming</h2>
+				<article class="stressTrack">
+					<h3 class="aH">Stress Tracking App</h3>
+				</article>
+				<article class="voteForm">
+					<h3 class="aH">Club Voting Form</h3>
+				</article>
+				<article class="CHANGETHIS">
+					<h3 class="aH">TITLE</h3>
+				</article>
+			</section>
+			<section id="webDesignWrite">
+				<h2 class="h2 text-center">Web Design and Writing</h2>
+				<article class="bisonsAbroad">
+					<h3 class="aH">Bisons Abroad</h3>
+				</article>
+				<article class="CHANGETHIS">
+					<h3 class="aH">TITLE</h3>
+				</article>
+			</section>
+			<section id="graphicDesign">
+				<h2 class="h2 text-center">Graphic Design</h2>
+				<article class="revereCo">
+					<h3 class="aH">Revere &amp; Co.</h3>
+				</article>
+				<article class="saPosters">
+					<h3 class="aH">SA Posters</h3>
+				</article>
+				<article class="shirtDesigns">
+					<h3 class="aH">Shirt Designs</h3>
+				</article>
+			</section>
+			<section id="internships">
+				<h2 class="h2 text-center">Internship</h2>
+				<article class="intro">
+					<h3 class="aH">ALSAC/St. Jude</h3>
+				</article>
+				<article class="telethon">
+					<h4 class="aH">Telethon Landing Page</h4>
+				</article>
+				<article class="hulu">
+					<h4 class="aH">Hulu Plus Sign-Up Form</h4>
+				</article>
+				<article class="process">
+					<h4 class="aH">Team Experience</h4>
+				</article>
+			</section>
 			<!-- <dl class="dl-horizontal">
 				<dt>
 					<a href="portfolio/trackingapp.html" class="text-blue">Tracking App</a>

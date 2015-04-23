@@ -10,6 +10,15 @@ hr.divider{
 	}
 div.container.print{
 	@include open;
+	button#print {
+		margin-top: 20px;
+		position: fixed;
+	}
+	button#printText {
+		position: fixed;
+		// top: 350px;
+		margin-top: 65px;
+	}
 }
 img#logo{
 	height: 140px;

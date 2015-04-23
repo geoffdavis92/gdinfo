@@ -213,7 +213,22 @@
 .text-base {
   color: #111 !important; }
   .text-base#hv:hover, body div.container a.text-base:hover {
-    color: #d0d0d0 !important; }
+    color: #414141 !important; }
+
+.text-base-5 {
+  color: #919191 !important; }
+  .text-base-5:hover {
+    color: silver !important; }
+
+.text-base-3 {
+  color: #656565 !important; }
+  .text-base-3:hover {
+    color: #858585 !important; }
+
+.text-base-25 {
+  color: #515151 !important; }
+  .text-base-25#hv:hover {
+    color: #717171 !important; }
 
 /* Font-style Helpers */
 .text-sans {
@@ -255,6 +270,70 @@ div.portfolio.item pre.fix-h {
   height: 250px;
   overflow-y: scroll; }
 
+/* GD.INFO => PRINT */
+div.container.screen {
+  display: none; }
+
+hr.divider {
+  margin-bottom: 0px;
+  margin-top: 5px;
+  border-color: #111;
+  box-shadow: 0 0 15px 1px #d0d0d0; }
+
+div.container.print {
+  font-family: "open sans", "arial", sans-serif;
+  font-weight: 300; }
+  div.container.print button#print {
+    margin-top: 20px;
+    position: fixed; }
+  div.container.print button#printText {
+    position: fixed;
+    margin-top: 65px; }
+
+img#logo {
+  height: 140px;
+  width: 140px; }
+
+h1 {
+  font-size: 5em; }
+
+h3 {
+  font-family: "droid serif", "curior", serif;
+  border-bottom: 1px solid #111;
+  padding-bottom: 5px; }
+
+div.row.contact-content {
+  margin-bottom: 25px; }
+div.row.col-title h4 {
+  color: #9D2042;
+  margin-bottom: -10px; }
+div.row section.job h4.title {
+  border-bottom: 1px solid #111;
+  margin-bottom: 0px;
+  padding-bottom: 5px; }
+div.row section.job i.organization-dates {
+  font-size: 10px;
+  line-height: 8px; }
+div.row section.job ul {
+  font-size: 12px; }
+
+@media only print {
+  header {
+    display: none; }
+
+  footer {
+    display: none; }
+
+  div.container.screen {
+    display: none; }
+
+  div.container.print {
+    display: initial;
+    font-family: "open sans", "arial", sans-serif;
+    font-weight: 300; }
+    div.container.print h1, div.container.print h2, div.container.print h3, div.container.print h4, div.container.print h5, div.container.print h6 {
+      font-family: "droid serif", "curior", serif;
+      font-weight: 700; } }
 /* GD.INFO THEME => CSS */
 *:active, *:hover {
   text-decoration: none; }
@@ -264,8 +343,9 @@ body {
   background: #f7f7f7;
   overflow-y: scroll;
   /* Headings */
-  /* Style Classes */
-  /* Styled Element */ }
+  /* Style Classes */ }
+  body[data-spy] {
+    position: relative; }
   body h1 small, body h2 small, body h3 small, body h4 small, body h5 small, body h6 small {
     font-family: "droid sans", "arial", sans-serif;
     font-weight: 400; }
@@ -355,7 +435,7 @@ body {
   body div.container div.main div.jumbotron.profile {
     background-image: url("../img/gd.jpg");
     background-repeat: no-repeat;
-    background-position: 0 -175px;
+    background-position: 0 -263px;
     background-size: cover;
     height: 325px; }
   body div.container div.main h2, body div.container div.main h3, body div.container div.main h4 {
@@ -392,6 +472,13 @@ body {
     font-family: "droid sans", "arial", sans-serif;
     font-weight: 400;
     font-size: 16px; }
+    body div.container div.main ul.list.contact {
+      font-size: 18px;
+      vertical-align: middle; }
+      body div.container div.main ul.list.contact li {
+        padding: 5px 0; }
+      body div.container div.main ul.list.contact i {
+        font-size: 24px; }
   body div.container div.main blockquote {
     font-style: italic; }
     body div.container div.main blockquote::after {
@@ -415,6 +502,11 @@ body {
     font-family: "droid mono", monospace; }
     body div.container div.main form input.submit {
       width: 100%; }
+  body div.container div.main section .aH {
+    border-bottom: 1px solid #111;
+    font-style: italic;
+    padding-bottom: 5px;
+    width: 50%; }
   body div.container div.main section[id] {
     margin-left: 15px; }
     body div.container div.main section[id] p {
@@ -464,7 +556,7 @@ body {
         color: white;
         padding: 5px 3px 5px 12px; }
   body div.container button {
-    background-color: white;
+    background-color: auto;
     border: #20429D 1px solid;
     border-radius: 5px;
     color: #20429D 1px solid;
@@ -1317,5 +1409,8 @@ body {
       color: white; }
     body footer a:active, body span#footer a:active {
       color: #EEC141; }
+  body ul.nav.spyElement {
+    position: fixed;
+    top: 235px; }
 
 /*# sourceMappingURL=theme.css.map */

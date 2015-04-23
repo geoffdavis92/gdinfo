@@ -8,9 +8,14 @@ function hover(d){			// d => 20
 	}
 }
 
-function print(){
-	// Button to print .html page?
+function printFile(file){
+	console.log('printFile: '+file);
+	window.open("portfolio/"+file+".html", "_blank");
 }
+$('button#print').click(function(){
+	console.log('print click '+ $(this).attr('data-file'));
+	printFile($(this).attr('data-file'));
+});
 
 $('ul li.hv').each(function(){
 	var classes = $(this).attr('class');
@@ -66,3 +71,6 @@ $('div.carousel-innner div.item img').css({
 		width: "250px", 
 		height: "100px"
 });
+
+// ScrollSpy => portfolio.html
+$('body').scrollspy({ target: '#navSpy'});

@@ -4,6 +4,8 @@
 	// VARIABLES
 		$t 			: transparent;
 		$base		: #111;
+		$base25		: lighten($base,25%);
+		$base3		: lighten($base,33%);
 		$base5		: lighten($base,50%);
 		$base75		: lighten($base,75%);
 		$base9		: lighten($base,90%);

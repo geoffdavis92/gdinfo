@@ -10,10 +10,11 @@
 	<link rel="stylesheet" href="css/theme.css"/>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 </head>
-<body title="page">
+<body data-type="page">
 	<span id="header"></span>
 	<div class="container screen">
-		<div class="col-xs-2"></div>
+		<div class="col-xs-2">
+		</div>
 		<div class="col-xs-8 main">
 			<h2>Resum&eacute;</h2>
 
@@ -27,8 +28,11 @@
 	</div>
 	<!-- /.screen -->
 	<div class="container print">
-		<div class="col-xs-1"></div>
-		<div class="col-xs-10 resume">
+		<div class="col-md-2 text-center">
+			<button class="btn btn-primary fix-top" id="print" data-file="geoffdavisresume">Open PDF</button>
+			<button class="btn btn-primary fix-top" id="printText" data-file="geoffdavisresumeText">Open TXT</button>
+		</div>
+		<div class="col-md-9 resume">
 			<div class="row">
 				<br>
 			</div>
@@ -154,7 +158,7 @@
 			<!-- Right Column -->
 		</div> 
 		<!-- /.resume -->
-		<div class="col-xs-1"></div>
+		<div class="col-md-1"></div>
 	</div>
 	<!-- /.print -->
 	<span id="footer"></span>

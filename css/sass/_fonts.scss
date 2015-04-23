@@ -1,7 +1,6 @@
 // GD.INFO : _FONTS => SCSS \\
 /* GD.INFO _FONTS => CSS */
 	// Imports
-		//@import "../fonts/fa-icons/scss/font-awesome";
 		@font-face { /* serif */
 			font-family: 'droid serif';
 			src:url('fonts/droid/serif/droidserif.ttf') format(truetype), /* 400 */
@@ -99,7 +98,25 @@
 .text-base{
 	color: $base !important;
 	&#hv:hover{
-		color: lighten($base5,25%) !important;
+		color: lighten($base,18.75%) !important;
+	}
+}
+.text-base-5 {
+	color: $base5 !important;
+	&:hover{
+		color: lighten($base5,18.75%) !important;
+	}
+}
+.text-base-3 {
+	color: $base3 !important;
+	&:hover{
+		color: lighten($base3,12.5%) !important;
+	}
+}
+.text-base-25 {
+	color: $base25 !important;
+	&#hv:hover{
+		color: lighten($base25,12.5%) !important;
 	}
 }
 /* Font-style Helpers */
