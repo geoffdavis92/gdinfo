@@ -39,18 +39,307 @@
             <p></p>
             <h3 class="subheading text-left"><em>HTML</em></h3>
             <p>{{ Talk about the <code>.html</code>}}</p>
-<pre class="fix-h"><code> &lt;!-- HTML : Will need to escape characters --&gt;
+<pre class="fix-h"><code> &lt;!DOCTYPE html>
+&lt;head>
+    &lt;title>Form Voting&lt;/title>
+    &lt;link rel="stylesheet" href="style.css" type="text/css">
+    &lt;script src="../../../bower_components/jquery/dist/jquery.js">&lt;/script>
+&lt;/head>
+&lt;body data-trace="votingform.html">
+&lt;h1>Voting Form&lt;/h1>
+&lt;form name="Club Voting Form" class="clubform">
+    &lt;select id="list">
+    &lt;/select>
+&lt;/form>
+&lt;button onclick="vote();">Vote!&lt;/button>
+
+&lt;table id="display" cellpadding="none">
+&lt;tr id="names">&lt;/tr>
+&lt;tr id="votes">&lt;/tr>
+&lt;/table>
+
+&lt;button onclick="reset();">Reset&lt;/button>
+
+&lt;!-- ADD CSS LINK AND FOOTER -->
+&lt;!-- &lt;link rel="stylesheet" href="../sample_styles/portfolio.css"> -->
+
+&lt;div class="gdinfo-portfolio">
+    &lt;link rel="stylesheet" href="../sample_styles/portfolio.css">
+    &lt;footer class="bg-base" id="itemFooter" style="margin-left: -3.1%">
+        &lt;a class="block-center exit btn" onclick="window.close();">Back to Project&lt;/a>
+    &lt;/footer>
+&lt;/div>
+
+&lt;script src="script.js">&lt;/script>
+
+&lt;!-- MODAL -->
+&lt;div class="modal">
+    &lt;div class="content">
+        &lt;h2>Are you new here?&lt;/h2>
+        &lt;h3>We only allow new faces; please enter your name below!&lt;/h3>
+        &lt;form id="namecheck">
+        &lt;label for="name">Name: &lt;/label>&lt;input id="nameField" name="name" type="text">
+        &lt;/form>
+        &lt;button class="close" onclick="checkName();">Submit&lt;/button>
+    &lt;/div>
+&lt;/div>
+&lt;script src="modal-window.js">&lt;/script>
+&lt;script src="modal-init.js">&lt;/script>
+&lt;/body>
+&lt;/html>
+
 </code></pre>
             <h3 class="subheading text-left"><em>CSS</em></h3>
             <p>{{ Talk about the <code>.css</code>}}</p>
             <p><strong>Code:</strong></p>
-            <pre class="fix-h"><code>/* CSS code */
+            <pre class="fix-h"><code>/*style.css*/
+:root{
+    padding: 2.5em;
+    font-family: sans-serif;
+    font-size: .9em;
+}
+div.modal{
+    z-index: 1000;
+    position: absolute;
+}
+form{
+    width: 100%;
+}
+form select{
+    font-size: 1.1em;
+}
+button{
+    width: 5%;
+    margin-left:47.5%;
+    margin-top: .75%;
+}
+    button.close{
+        width: 20%;
+        margin: 2.5% 40% 2.5% 40%;
+    }
+form, h1, option, select, table{
+    text-align: center;
+}
+table{
+    background-color: lightgray;
+    border: 0px solid transparent;
+    border-radius: 5px;
+    padding: 5px 2px 5px 2px;
+    width: 100%;
+    margin-top: 10px;
+}
+tr#names td{
+    padding: 5px;
+}
+td{
+    border-radius: 5px;
+    border: 2px solid transparent;
+    padding: 3px 0 3px 0;
+    transition: all .15s;
+}
+td.preview{
+    border-color: red !important;
+}
+td.active.header{
+    color: red;
+    transition: all .15s;
+}
+td.active.votes{
+    background-color: red;
+    color: white;
+    transition: all .15s;
+}
+td.reset{
+    border-color:transparent;
+    color:initial;
+    background-color:initial;
+}
+/* MODAL STYLES */
+    div.modal div.content h2{
+        text-align: center;
+        font-size: 275%;
+        color: #4a9e9b;
+        text-shadow: 1px 1px #fad0b6;
+        margin-top: -1.25%;
+    }
+    div.modal div.content h3{
+        text-align: center;
+        color: #4a9e9b;
+        margin-top: -7.5%;
+    }
+    div.modal div.content form{
+        display: inline;
+        font-size: 1.25em;
+    }
+        div.modal div.content input{
+            margin: 0 0 0 0;
+            font-size: 1em;
+            color: #9e544c;
+            padding-left: 10px;
+        }
+        div.modal div.content label{
+            margin: 0 0 0 10%;
+            color: #304f63;
+        }
 </code></pre>
             <h3 class="subheading text-left"><em>Javascript</em></h3>
             <p>{{ Talk about the <code>.js</code>}}</p>
             <p><strong>Code:</strong></p>
-<pre class="fix-h"><code>// Javascript code
+<pre class="fix-h"><code>// script.js
+
+var voteArray = [];
+var clubArray = ["Alpha Tau","Beta Omega Chi","Chi Sigma Alpha","Delta Chi Delta","Gamma Sigma Phi","King\'s Men","Knights","Kydoai","Omega Phi","Pi Kappa Epsilon","Sigma Nu Epsilon","Sub-T 16","Titans","TNT"];
+var idArray = ['at','box','csa','dxd','gsp','km','kn','ky','ophi','pikes','sne','subt','titans','tnt'];
+
+for(var i = 0; i &lt; clubArray.length; i++){
+    $('select#list').append("&lt;option value="+clubArray[i]+">"+clubArray[i]+"&lt;/option>");
+    voteArray[i] = 0;
+    $('tr#names').append("&lt;td id="+idArray[i]+"-header>"+clubArray[i]+"&lt;/td>");
+    $('tr#votes').append("&lt;td id="+idArray[i]+"-votes>"+voteArray[i]+"&lt;/td>")
+}
+
+$('select#list').change(function(){
+    var selected = $('select#list option:selected').text();
+    for(var i = 0; i &lt; clubArray.length; i++){
+        if(selected == clubArray[i]){
+            $('.preview').removeClass();
+            $('tr#votes td').css('border-color','transparent');
+            $('td#'+idArray[i]+'-votes').addClass('preview');
+        }
+    }
+});
+
+function vote(){
+    var selected = $('select#list option:selected').text();
+    // console.log(selected + " is selected.");
+    // $('.active').removeClass();
+    $('td').removeClass();
+    for(var i = 0; i &lt; clubArray.length; i++){
+        if(selected == clubArray[i]){
+            var indexVote = voteArray[i];
+            indexVote += 1;
+            voteArray[i] = indexVote;
+            $('td#'+idArray[i]+'-votes').text(voteArray[i]).delay(750).fadeIn(1000);
+            // console.log('td#'+idArray[i]+'-votes' + " is the destination.");
+            console.log(indexVote + " is the vote count for " + clubArray[i]);
+            $('td#'+idArray[i]+'-votes').addClass('active votes');
+            $('td#'+idArray[i]+'-header').addClass('active header');
+        }
+    }
+}
+
+function reset(){
+    var selected = $('select#list option:selected').text();
+    // for(var i = 0; i &lt; clubArray.length; i++){
+        // if(selected == clubArray[i]){
+            $('tr#votes td').text("0");
+            $('td').removeClass();
+            $('td').addClass('reset');
+            console.log("%cR-E-S-E-T",'font-weight: heavy; font-size: 2.5em; text-shadow: 0px 0px 9px red;');
+        // }
+    // }
+}
+
+// Snippet that checks &lt;code> blocks and returns HTML characters as text()
+function checkCode(){
+    var slice = $('span.code').slice();
+    for(var i = 0; i &lt;= slice.length; i++){
+        var escaped = $(slice[i]).html();
+        $(slice[i]).text(escaped);
+    }
+}
+checkCode();
 </code></pre>
+<pre class="fix-h"><code>// _modal-window.js
+var modal = (function(){
+    var $window = $(window);
+    var $modal = $('div.modal');
+    var $content = $('div.content');
+    var $close = $('button.close');
+
+    $modal.append($content,$close);
+
+    // $close.on('click',function(e){
+    //  e.preventDefault();
+    //  modal.close();
+    // });
+
+    return{
+        center: function(){
+            var top = Math.max($window.height() - $modal.outerHeight(),0) / 2;
+            var left = Math.max($window.width() - $modal.outerWidth(),0) / 2;
+            $modal.css({
+                top: top + $window.scrollTop(),
+                left: left + $window.scrollLeft(),
+                'background-color': '#fdfdfd',
+                'border': '2px solid #9E544C',
+                'border-radius': '10px',
+                'padding': '5px 10px 5px 10px'
+            });
+            $content.css({
+                'padding': '5px 10px 5px 10px'
+            });
+            $close.css({
+
+            })
+        },
+        open: function(settings){
+            $content.empty().append(settings.content);
+            $modal.css({
+                width: settings.width || 'auto', // width = to passed 'settings' value, OR takes on auto value
+                height: settings.height || 'auto'
+            }).appendTo('body');
+            modal.center();
+            $(window).on('resize',modal.center);
+        },
+        close: function(){
+            $content.empty();
+            $modal.detach();
+            $(window).off('resize', modal.center);
+            $('body *:not(div.modal)').delay(375).fadeIn(1000).css('opacity','1');
+            $('form > *, button').removeAttr('disabled');
+        }
+    };
+}());</code></pre>
+<pre class="fix-h"><code>// _modal-init.js
+$(document).ready(function(){
+    $('body :not(div.modal)').hide(0).delay(250).fadeIn(1500).css('opacity','.25');
+    $('form > *, button').attr('disabled','disabled');
+});
+
+(function(){
+    var $content = $('div.content').html();
+    $('.modal').hide(0).delay(250).fadeIn(500);
+    $('.modal').detach();
+    $(document).ready(function(){
+        // $('.modal').css('opacity','1');
+        modal.open({content: $content, width: 340, height: 300});
+    });
+}());
+
+function checkName(){
+    var nameStorage = localStorage.getItem("name");
+    if(nameStorage){
+        console.log("yep");
+    }
+    else{
+        console.log("nope");
+    }
+    var $text = $('input#nameField').value;
+    var set = localStorage.setItem("name", $text);
+    if(nameStorage === localStorage.getItem("name")){
+        // console.log(localStorage.getItem("name"));
+        // console.log(nameStorage);
+        // $('div.modal div.content form#namecheck').remove();
+        // $('div.modal div.content').append('&lt;p>&lt;b>WE DO NOT WANT YOUR TYPE HERE&lt;/b>&lt;/p>');
+        // console.log("BAD");
+        // $('button.close').attr('disabled','disabled');
+    }
+    // else{
+        // alert("welcome!");
+        modal.close();
+    // }
+}</code></pre>
         </div>
         <div class="col-xs-1"></div>
     </div>
